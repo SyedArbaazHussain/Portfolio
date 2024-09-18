@@ -25,8 +25,8 @@ const NavBar = () => {
   }, [menuRef]);
 
   return (
-    <nav className="sticky top-0 flex w-full bg-green-600 justify-center items-center h-[10vh]">
-      <div className="flex w-[90vw] h-full xl:w-[80vw] xl:h-full bg-red-600 text-center items-center gap-5 ">
+    <nav className="sticky top-0 flex w-full bg-green-600 justify-center content-center items-center h-[9vh]">
+      <div className="flex w-full h-full xl:w-[80vw] xl:h-full bg-red-600 text-center items-center gap-5 ">
         <div className="h-full flex-shrink-0 justify-center items-center content-center">
           <img
             className="h-5/6 bg-yellow-700"
@@ -51,7 +51,7 @@ const NavBar = () => {
             CONTACT
           </div>
         </div>
-        <div className="flex flex-shrink max-h-full h-4/6 min-w-24 max-w-28 xl:hidden bg-yellow-300">
+        <div className="flex flex-shrink max-h-full h-5/6 px-1 py-1 min-w-20 max-w-22 xl:hidden bg-yellow-300">
           <button
             className="relative flex items-center content-center justify-center rounded-full mx-2 h-full w-full bg-slate-700 ring-0 ring-gray-300 hover:ring-8 focus:ring-4 ring-opacity-30 transition duration-200 shadow-xl"
             onClick={toggleMenu}
@@ -59,9 +59,9 @@ const NavBar = () => {
             aria-label="Toggle menu"
           >
             <div className="flex flex-col justify-center w-full h-full transform transition-all duration-300 origin-center items-center">
-              <div className="bg-white h-[4px] w-3/6 my-[3px] py-[4px]  rounded transform transition-all duration-300 origin-left group-focus:rotate-45 group-focus:w-2/3 delay-150"></div>
-              <div className="bg-white h-[4px] w-3/6 my-[3px] py-[4px]  rounded transform transition-all duration-300 group-focus:translate-x-10"></div>
-              <div className="bg-white h-[4px] w-3/6 my-[3px] py-[4px]  rounded transform transition-all duration-300 origin-left group-focus:-rotate-45 group-focus:w-2/3 delay-150"></div>
+              <div className="bg-white h-[4px] w-2/6 my-[2px] py-[2px]  rounded transform transition-all duration-300 origin-left group-focus:rotate-45 group-focus:w-2/3 delay-150"></div>
+              <div className="bg-white h-[4px] w-2/6 my-[2px] py-[2px]  rounded transform transition-all duration-300 group-focus:translate-x-10"></div>
+              <div className="bg-white h-[4px] w-2/6 my-[2px] py-[2px]  rounded transform transition-all duration-300 origin-left group-focus:-rotate-45 group-focus:w-2/3 delay-150"></div>
             </div>
           </button>
         </div>
@@ -71,18 +71,18 @@ const NavBar = () => {
       {isMenuOpen && (
         <div
           ref={menuRef}
-          className="fixed xl:hidden flex flex-col h-[30%] w-[90vw] top-[10vh] bg-gray-700 z-50"
+          className="fixed xl:hidden flex flex-col h-[30%] w-[70vw] top-[10vh] bg-gray-700 z-50"
         >
-          <div className="bg-slate-500 flex-grow justify-center content-center text-center text-3xl">
+          <div className="bg-slate-500 flex-grow justify-center content-center text-center text-2xl">
             HOME
           </div>
-          <div className="bg-slate-400 flex-grow justify-center content-center text-center text-3xl">
+          <div className="bg-slate-400 flex-grow justify-center content-center text-center text-2xl">
             ABOUT
           </div>
-          <div className="bg-slate-300 flex-grow justify-center content-center text-center text-3xl">
+          <div className="bg-slate-300 flex-grow justify-center content-center text-center text-2xl">
             PROJECTS
           </div>
-          <div className="bg-slate-600 flex-grow justify-center content-center text-center text-3xl">
+          <div className="bg-slate-600 flex-grow justify-center content-center text-center text-2xl">
             CONTACT
           </div>
         </div>
