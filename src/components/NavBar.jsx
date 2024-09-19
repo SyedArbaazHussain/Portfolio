@@ -1,4 +1,5 @@
 import { useState, useEffect, useRef } from "react";
+import PropTypes from 'prop-types';
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,71 +25,85 @@ const NavBar = () => {
     };
   }, [menuRef]);
 
-  return (
-    <nav className="sticky top-0 flex w-full bg-green-600 justify-center content-center items-center h-[9vh]">
-      <div className="flex w-full h-full xl:w-[80vw] xl:h-full bg-red-600 text-center items-center gap-5 ">
-        <div className="h-full flex-shrink-0 justify-center items-center content-center">
-          <img
-            className="h-5/6 bg-yellow-700"
-            src="/me-head-circle.png"
-            alt="My Image"
-          />
-        </div>
-        <div className="flex justify-center items-center h-full flex-1 bg-yellow-700">
-          <div className="text-3xl text-nowrap">SYED ARBAAZ HUSSAIN</div>
-        </div>
-        <div className="hidden flex-grow xl:flex xl:flex-row xl:flex-grow h-4/6 justify-center content-center">
-          <div className="bg-slate-500 flex-grow justify-center content-center text-center text-xl">
-            HOME
+    return (
+      <nav className="sticky top-0 w-full bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg">
+      <div className="flex justify-between items-center h-16 px-4 max-w-7xl mx-auto">
+          <div className="flex items-center">
+            <img
+              className="h-12 w-12 rounded-full"
+              src="/me-head-circle.png"
+              alt="My Image"
+            />
+            <div className="ml-4 text-xl font-bold text-white sm:text-2xl md:text-3xl">
+              SYED ARBAAZ HUSSAIN
+            </div>
           </div>
-          <div className="bg-slate-400 flex-grow justify-center content-center text-center text-xl">
-            ABOUT
+          
+          {/* Desktop Menu */}
+          <div className="hidden md:flex space-x-4">
+            <NavLink href="#home">HOME</NavLink>
+            <NavLink href="#about">ABOUT</NavLink>
+            <NavLink href="#projects">PROJECTS</NavLink>
+            <NavLink href="#contact">CONTACT</NavLink>
           </div>
-          <div className="bg-slate-300 flex-grow justify-center content-center text-center text-xl">
-            PROJECTS
-          </div>
-          <div className="bg-slate-600 flex-grow justify-center content-center text-center text-xl">
-            CONTACT
-          </div>
-        </div>
-        <div className="flex flex-shrink max-h-full h-5/6 px-1 py-1 min-w-20 max-w-22 xl:hidden bg-yellow-300">
+          
+          {/* Mobile Menu Button */}
           <button
-            className="relative flex items-center content-center justify-center rounded-full mx-2 h-full w-full bg-slate-700 ring-0 ring-gray-300 hover:ring-8 focus:ring-4 ring-opacity-30 transition duration-200 shadow-xl"
+            className="md:hidden p-2 rounded-md text-white hover:bg-green-700 focus:outline-none focus:ring-2 focus:ring-white"
             onClick={toggleMenu}
             aria-expanded={isMenuOpen}
             aria-label="Toggle menu"
           >
-            <div className="flex flex-col justify-center w-full h-full transform transition-all duration-300 origin-center items-center">
-              <div className="bg-white h-[4px] w-2/6 my-[2px] py-[2px]  rounded transform transition-all duration-300 origin-left group-focus:rotate-45 group-focus:w-2/3 delay-150"></div>
-              <div className="bg-white h-[4px] w-2/6 my-[2px] py-[2px]  rounded transform transition-all duration-300 group-focus:translate-x-10"></div>
-              <div className="bg-white h-[4px] w-2/6 my-[2px] py-[2px]  rounded transform transition-all duration-300 origin-left group-focus:-rotate-45 group-focus:w-2/3 delay-150"></div>
-            </div>
+            <svg className="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
           </button>
         </div>
-      </div>
-
-      {/* Mobile Menu */}
-      {isMenuOpen && (
+  
+        {/* Mobile Menu */}
+        {isMenuOpen && (
         <div
           ref={menuRef}
-          className="fixed xl:hidden flex flex-col h-[30%] w-[70vw] top-[10vh] bg-gray-700 z-50"
+          className="md:hidden absolute top-16 inset-x-0 bg-white bg-opacity-20 backdrop-filter backdrop-blur-lg shadow-md"
         >
-          <div className="bg-slate-500 flex-grow justify-center content-center text-center text-2xl">
-            HOME
+            <div className="px-2 pt-2 pb-3 space-y-1">
+              <MobileNavLink href="#home">HOME</MobileNavLink>
+              <MobileNavLink href="#about">ABOUT</MobileNavLink>
+              <MobileNavLink href="#projects">PROJECTS</MobileNavLink>
+              <MobileNavLink href="#contact">CONTACT</MobileNavLink>
+            </div>
           </div>
-          <div className="bg-slate-400 flex-grow justify-center content-center text-center text-2xl">
-            ABOUT
-          </div>
-          <div className="bg-slate-300 flex-grow justify-center content-center text-center text-2xl">
-            PROJECTS
-          </div>
-          <div className="bg-slate-600 flex-grow justify-center content-center text-center text-2xl">
-            CONTACT
-          </div>
-        </div>
-      )}
-    </nav>
+        )}
+      </nav>
+    );
+  };
+  
+  const NavLink = ({ href, children }) => (
+    <a
+      href={href}
+      className="text-white hover:bg-white hover:bg-opacity-20 px-3 py-2 rounded-md text-sm font-medium transition-colors duration-200"
+    >
+      {children}
+    </a>
   );
+  
+NavLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
 };
 
-export default NavBar;
+  const MobileNavLink = ({ href, children }) => (
+    <a
+      href={href}
+      className="text-white hover:bg-white hover:bg-opacity-20 block px-3 py-2 rounded-md text-base font-medium transition-colors duration-200"
+    >
+      {children}
+  </a>
+);
+
+MobileNavLink.propTypes = {
+  href: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+};
+  
+  export default NavBar;
