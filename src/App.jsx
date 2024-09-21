@@ -10,9 +10,7 @@ function App() {
 
   return (
     <>
-          <section id="navbar">
             <NavBar />
-          </section>
           <section id="home">
             <Home />
           </section>
