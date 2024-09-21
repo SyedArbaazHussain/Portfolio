@@ -3,10 +3,16 @@ import headImg from '/me-head-circle-thumb.png'
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const menuRef = useRef(null);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
+  };
+
+  const toggleDarkMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.documentElement.classList.toggle('dark');
   };
 
   useEffect(() => {
@@ -15,16 +21,22 @@ const NavBar = () => {
         setIsMenuOpen(false);
       }
     };
-
-
     document.addEventListener("mousedown", handleClickOutside);
     return () => {
       document.removeEventListener("mousedown", handleClickOutside);
     };
   }, [menuRef]);
 
-    return (
-      <nav className="sticky top-4 w-full bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg border-4 rounded-full">
+  useEffect(() => {
+    if (isDarkMode) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDarkMode]);
+
+  return (
+    <nav className="sticky top-4 w-full bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 backdrop-filter backdrop-blur-lg border-4 rounded-full">
       <div className="flex justify-between items-center h-16 px-4 max-w-7xl mx-auto">
           <div className="flex items-center">
             <img
@@ -44,6 +56,12 @@ const NavBar = () => {
               <button onClick={() => window.location.href='#about'} className="bg-blue-500 px-3 py-2 rounded-full text-xs font-medium text-black sm:text-sm md:text-base">ABOUT</button>
               <button onClick={() => window.location.href='#projects'} className="bg-blue-500 px-3 py-2 rounded-full text-xs font-medium text-black sm:text-sm md:text-base">PROJECTS</button>
               <button onClick={() => window.location.href='#contact'} className="bg-blue-500 px-3 py-2 rounded-full text-xs font-medium text-black sm:text-sm md:text-base">CONTACT</button>
+              <button
+            onClick={toggleDarkMode}
+            className="bg-blue-500 dark:bg-blue-700 px-3 py-2 rounded-full text-xs font-medium text-black dark:text-white sm:text-sm md:text-base"
+          >
+            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+          </button>
             </div>
           </div>
           
@@ -64,13 +82,19 @@ const NavBar = () => {
         {isMenuOpen && (
         <div
           ref={menuRef}
-          className="md:hidden absolute top-16 inset-x-0 bg-white bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-md"
+          className="md:hidden absolute top-16 inset-x-0 bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-md"
         >
-            <div className="px-2 pt-2 pb-3 space-y-1">
+          <div className="px-2 pt-2 pb-3 space-y-1">
               <button onClick={() => window.location.href='#home'} className="block w-full text-left px-3 py-2 text-base font-medium text-black hover:bg-gray-200">HOME</button>
               <button onClick={() => window.location.href='#about'} className="block w-full text-left px-3 py-2 text-base font-medium text-black hover:bg-gray-200">ABOUT</button>
               <button onClick={() => window.location.href='#projects'} className="block w-full text-left px-3 py-2 text-base font-medium text-black hover:bg-gray-200">PROJECTS</button>
               <button onClick={() => window.location.href='#contact'} className="block w-full text-left px-3 py-2 text-base font-medium text-black hover:bg-gray-200">CONTACT</button>
+              <button
+              onClick={toggleDarkMode}
+              className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
+            >
+              {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            </button>
             </div>
           </div>
         )}
