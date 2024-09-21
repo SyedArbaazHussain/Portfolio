@@ -23,7 +23,6 @@ const Home = () => {
             <a href="#about" className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors'>About Me</a>
             <a href="#projects" className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors'>Projects</a>
             <a href="#contact" className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors'>Contact</a>
-            <a href="#footer" className='bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600 transition-colors'>Footer</a>
           </div>
           <div className='flex justify-center items-center'>
             <img src={headImg} alt="Syed Arbaaz Hussain" className='w-48 h-48 xl:w-64 xl:h-64 object-cover rounded-full' />
