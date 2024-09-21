@@ -9,7 +9,7 @@ import './App.css'
 function App() {
 
   return (
-    <>
+    <div className='bg-slate-200 dark:bg-gray-900 text-black dark:text-white'>
             <NavBar />
           <section id="home">
             <Home />
@@ -26,7 +26,7 @@ function App() {
           <section id="footer">
             <Footer />
           </section>
-    </>
+    </div>
   )
 }
 

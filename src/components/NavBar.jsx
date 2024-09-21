@@ -1,9 +1,10 @@
 import { useState, useEffect, useRef } from "react";
 import headImg from '/me-head-circle-thumb.png'
 
+
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(true);
+  const [isDarkMode, setIsDarkMode] = useState(false);
   const menuRef = useRef(null);
 
   const toggleMenu = () => {
@@ -36,7 +37,7 @@ const NavBar = () => {
   }, [isDarkMode]);
 
   return (
-    <nav className="sticky top-4 w-full bg-white dark:bg-gray-800 bg-opacity-50 dark:bg-opacity-50 backdrop-filter backdrop-blur-lg border-4 rounded-full">
+    <nav className="sticky top-4 w-full dark:bg-slate-500 bg-gray-800 bg-opacity-20 dark:bg-opacity-50 backdrop-filter backdrop-blur-md border-4 border-blue-400 dark:border-blue-500 rounded-full">
       <div className="flex justify-between items-center h-16 px-4 max-w-7xl mx-auto">
           <div className="flex items-center">
             <img
@@ -60,11 +61,10 @@ const NavBar = () => {
             onClick={toggleDarkMode}
             className="bg-blue-500 px-3 py-2 rounded-full text-xs font-medium text-black dark:text-white sm:text-sm md:text-base"
           >
-            {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+            {isDarkMode ? 'Light' : 'Dark'}
           </button>
             </div>
           </div>
-          
           {/* Mobile Menu Button */}
           <button
             className="md:hidden p-2 rounded-full text-black hover:bg-blue-500 bg-blue-500 focus:outline-none focus:ring-2 focus:ring-white"
@@ -93,7 +93,7 @@ const NavBar = () => {
               onClick={toggleDarkMode}
               className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 dark:hover:bg-gray-700"
             >
-              {isDarkMode ? 'Light Mode' : 'Dark Mode'}
+              {isDarkMode ? 'Light' : 'Dark'}
             </button>
             </div>
           </div>
