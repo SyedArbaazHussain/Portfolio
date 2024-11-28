@@ -13,7 +13,11 @@ function App() {
       <section id="">
         <Home />
       </section>
-      <section id="about">
+      <section
+        id="about"
+        data-aos="fade-left"
+        className="transition duration-500 transform"
+      >
         <About />
       </section>
       <section id="projects">
