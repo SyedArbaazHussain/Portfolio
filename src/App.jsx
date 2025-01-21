@@ -8,7 +8,8 @@ import "./App.css";
 
 function App() {
   return (
-    <div className="bg-slate-200 dark:bg-gray-900 text-black dark:text-white">
+    <>
+    <div className="lg:p-20 md:p-10 px-5 bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white">
       <NavBar />
       <section id="">
         <Home />
@@ -30,6 +31,7 @@ function App() {
         <Footer />
       </section>
     </div>
+    </>
   );
 }
 
