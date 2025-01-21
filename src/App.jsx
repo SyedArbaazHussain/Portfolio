@@ -9,28 +9,28 @@ import "./App.css";
 function App() {
   return (
     <>
-    <div className="lg:p-20 md:p-10 px-5 bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white">
-      <NavBar />
-      <section id="">
-        <Home />
-      </section>
-      <section
-        id="about"
-        data-aos="fade-left"
-        className="transition duration-500 transform"
-      >
-        <About />
-      </section>
-      <section id="projects">
-        <Projects />
-      </section>
-      <section id="contact">
-        <Contact />
-      </section>
-      <section id="footer">
-        <Footer />
-      </section>
-    </div>
+      <div className="lg:px-20 md:px-10 px-5 bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white w-full">
+          <NavBar />
+        <section id="">
+          <Home />
+        </section>
+        <section
+          id="about"
+          data-aos="fade-left"
+          className="transition duration-500 transform"
+        >
+          <About />
+        </section>
+        <section id="projects">
+          <Projects />
+        </section>
+        <section id="contact">
+          <Contact />
+        </section>
+        <section id="footer">
+          <Footer />
+        </section>
+      </div>
     </>
   );
 }
