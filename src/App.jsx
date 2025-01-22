@@ -9,8 +9,8 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="lg:px-20 md:px-10 px-5 bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white w-full">
-          <NavBar />
+      <div className="lg:px-20 md:px-10 px-5 bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white">
+        <NavBar />
         <section id="">
           <Home />
         </section>
@@ -21,13 +21,25 @@ function App() {
         >
           <About />
         </section>
-        <section id="projects">
+        <section
+          id="projects"
+          data-aos="fade-left"
+          className="transition duration-500 transform"
+        >
           <Projects />
         </section>
-        <section id="contact">
+        <section
+          id="contact"
+          data-aos="fade-left"
+          className="transition duration-500 transform"
+        >
           <Contact />
         </section>
-        <section id="footer">
+        <section
+          id="footer"
+          data-aos="fade-left"
+          className="transition duration-500 transform"
+        >
           <Footer />
         </section>
       </div>
