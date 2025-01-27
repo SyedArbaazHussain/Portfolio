@@ -103,27 +103,30 @@ const About = () => {
         },
         {
           name: "UiPath",
-          icon: "https://res.cloudinary.com/brandpad/image/upload/c_scale,w_100/v1720707161/12472/240711-header-logo_0b06e675",
+          icon: "https://img.icons8.com/?size=100&id=HhCUhcFcSjU8&format=png&color=000000",
         },
       ],
     },
   ];
 
   return (
-    <div className="flex min-h-screen pt-40 w-full justify-center flex-col text-center px-4 overflow-hidden">
+    <div className="flex min-h-screen pt-40 w-full justify-center flex-col text-center overflow-hidden">
       {/* Heading */}
-      <h2 className="font-semibold text-orange-400 mb-6 text-3xl max-sm:text-lg max-md:text-xl max-lg:text-2xl">
+      <h1 className="text-6xl max-lg:text-5xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
+        About
+      </h1>
+      <h2 className="font-semibold text-orange-600 opacity-90 dark:text-orange-400 mb-6 text-3xl max-sm:text-lg max-md:text-xl max-lg:text-2xl">
         Hello! I am an engineer skilled in technical thinking, debugging,
         troubleshooting, and problem-solving. With expertise in{" "}
-        <span className="font-bold text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
+        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
           Web Development
         </span>
         ,
-        <span className="font-bold text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
+        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
           Software Development
         </span>
         ,
-        <span className="font-bold text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
+        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
           Databases
         </span>
         , I enjoy exploring new technologies and creating innovative projects.

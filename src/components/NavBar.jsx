@@ -55,7 +55,7 @@ const NavBar = () => {
             </button>
             <button
               onClick={toggleDarkMode}
-              className=" block px-3 py-2 text-base font-semibold rounded-full w-fit text-white dark:text-black hover:bg-gray-200 dark:hover:bg-gray-700 transition duration-300 text-left bg-blue-900 dark:bg-blue-200"
+              className=" block px-3 py-2 text-base font-semibold rounded-full w-fit text-white dark:text-black dark:hover:bg-blue-400 hover:bg-blue-700 transition duration-300 text-left bg-blue-900 dark:bg-blue-200"
             >
               {isDarkMode ? (
                 <span className="flex gap-2">

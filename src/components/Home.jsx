@@ -14,7 +14,7 @@ const Home = () => {
           <div className="text-center w-full">
             <h1 className="text-7xl max-md:text-4xl max-lg:text-5xl font-bold my-4">
               Hello, <br></br>I&apos;m{" "}
-              <span className="text-blue-700">Syed Arbaaz Hussain</span>
+              <span className="leading-relaxed text-blue-700">Syed Arbaaz Hussain</span>
             </h1>
             <p className="text-3xl max-sm:text-xl lg:mb-8 lg:mt-4 max-sm:mt-3 max-sm:mb-3 max-md:mb-6">
               I&apos;m a{" "}
