@@ -19,10 +19,6 @@ jobs:
       - name: Setup Bun
         uses: oven-sh/setup-bun@v2
 
-      # Clear Bun's cache (fix for npm registry errors)
-      - name: Clear Bun Cache
-        run: bun cache clean
-
       # Install dependencies with Bun
       - name: Install dependencies
         run: |
