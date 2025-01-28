@@ -7,6 +7,10 @@ const NavBar = () => {
   const [isDarkMode, setIsDarkMode] = useState(false);
   const menuRef = useRef(null);
 
+  useEffect(() => {
+    document.documentElement.classList.add("dark");
+  }, []);
+
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
