@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from "react";
-import headImg from "/me-head-circle-thumb.png";
+import DarkMode from "../assets/dark-mode.svg";
+import LightMode from "../assets/light-mode.svg";
 
 const NavBar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -59,12 +60,12 @@ const NavBar = () => {
             >
               {isDarkMode ? (
                 <span className="flex gap-2">
-                  <img src="src\assets\light-mode.svg" className="w-6" />
+                  <img src={LightMode} className="w-6" />
                   LIGHT
                 </span>
               ) : (
                 <span className="flex gap-2">
-                  <img src="src\assets\dark-mode.svg" className="w-6" />
+                  <img src={DarkMode} className="w-6" />
                   DARK
                 </span>
               )}
