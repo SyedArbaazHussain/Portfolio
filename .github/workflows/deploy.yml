@@ -15,11 +15,9 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # Install Bun and Add to PATH
+      # Setup Bun using the official action
       - name: Setup Bun
-        run: |
-          curl -fsSL https://bun.sh/install | bash
-          echo "export PATH=$HOME/.bun/bin:\$PATH" >> $GITHUB_ENV
+        uses: oven-sh/setup-bun@v2
 
       # Install dependencies using Bun
       - name: Install dependencies
@@ -44,11 +42,3 @@ jobs:
       id-token: write
 
     environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
-
-    steps:
-      # Deploy to GitHub Pages
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
