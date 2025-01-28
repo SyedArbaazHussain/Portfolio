@@ -77,7 +77,7 @@ const Projects = () => {
     );
   };
   return (
-    <div className="flex min-h-screen mt-10 w-full justify-center flex-col text-center overflow-hidden max-sm:px-5 max-md:px-20">
+    <div className="flex mt-10 w-full justify-center flex-col text-center overflow-hidden max-sm:px-5 max-md:px-20">
       {/* GRID */}
       <div className="hidden max-md:flex flex-col items-center justify-center h-full w-full p-6">
         <h1 className="text-4xl max-sm:text-3xl max-md:text-4xl max-md:font-black font-bold mb-6 text-center text-gray-800 dark:text-gray-200">

@@ -102,12 +102,12 @@ const NavBar = () => {
               >
                 PROJECTS
               </button>
-              <button
+              {/* <button
                 onClick={() => (window.location.href = "#contact")}
                 className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 transition duration-300"
               >
                 CONTACT
-              </button>
+              </button> */}
             </div>
           </div>
         )}

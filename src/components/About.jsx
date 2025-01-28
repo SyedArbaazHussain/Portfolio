@@ -110,7 +110,7 @@ const About = () => {
   ];
 
   return (
-    <div className="flex min-h-screen pt-40 w-full justify-center flex-col text-center overflow-hidden">
+    <div className="flex min-h-screen pt-40 xl:px-60 w-full justify-center flex-col text-center overflow-hidden">
       {/* Heading */}
       <h1 className="text-6xl max-lg:text-5xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
         About
