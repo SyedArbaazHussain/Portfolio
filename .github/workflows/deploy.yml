@@ -15,11 +15,11 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v4
 
-      # Install Bun
+      # Install Bun and Add to PATH
       - name: Setup Bun
         run: |
           curl -fsSL https://bun.sh/install | bash
-          export PATH="$HOME/.bun/bin:$PATH"
+          echo "export PATH=$HOME/.bun/bin:\$PATH" >> $GITHUB_ENV
 
       # Install dependencies using Bun
       - name: Install dependencies
