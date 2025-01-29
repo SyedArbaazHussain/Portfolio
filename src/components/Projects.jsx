@@ -1,10 +1,13 @@
 import React, { useState } from "react";
+import fallsafe from "../assets/fallsafe.png";
+import pcc from "../assets/pcc.png";
+import portfolio from "../assets/portfolio.png";
 
 const projects = [
   {
     name: "FallSafe-yolov8",
     link: "https://github.com/FallSafe/FallSafe-yolov8",
-    image: "src/assets/fallsafe.png",
+    image: fallsafe,
     description:
       "A real-time fall detection system using computer vision and machine learning to analyze CCTV footage and alert caregivers for quicker emergency services.",
     stars:
@@ -19,7 +22,7 @@ const projects = [
   {
     name: "PumpCare-Connect",
     link: "https://github.com/SyedArbaazHussain/PumpCare-Connect",
-    image: "src/assets/pcc.png",
+    image: pcc,
     description:
       "A comprehensive platform for managing and maintaining pump systems, including monitoring, scheduling maintenance, and generating reports.",
     stars:
@@ -34,7 +37,7 @@ const projects = [
   {
     name: "Portfolio",
     link: "https://github.com/SyedArbaazHussain/Portfolio",
-    image: "src/assets/portfolio.png",
+    image: portfolio,
     description:
       "A showcase of various projects and skills, including web development, software and machine learning, providing insights into technologies and functionalities.",
     stars:

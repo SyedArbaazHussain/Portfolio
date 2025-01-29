@@ -1,9 +1,12 @@
 import React, { useState } from "react";
+import yolov8 from "../assets/yolov8.png"
+import react from "../assets/react.png"
+import fullstack from "../assets/fullstack.png"
 
 const blogs = [
   {
     name: "YOLOv8 — Experience and Conclusion",
-    image: "src/assets/yolov8.png",
+    image: yolov8,
     link: "https://medium.com/@arbaaz14122002/yolov8-experience-and-conclusion-9c13b74ea668",
     description:
       "This blog explores YOLOv8's advancements in real-time object detection, highlighting features like single-stage detection, better architecture, and versatility, with applications in security, healthcare, retail, and autonomous systems.",
@@ -19,7 +22,7 @@ const blogs = [
   {
     name: "The Evolution of React and Its Ecosystem",
     link: "https://medium.com/@arbaaz14122002/the-evolution-of-react-and-its-ecosystem-f3927a70ebbb",
-    image: "src/assets/react.png",
+    image: react,
     description:
       "This blog highlights React's evolution, key features, ecosystem tools like Redux, and innovations like Hooks, showcasing its impact on modern, scalable, and interactive UI development.",
     stars:
@@ -34,7 +37,7 @@ const blogs = [
   {
     name: "Effective Strategies for Full-Stack Development",
     link: "https://medium.com/@arbaaz14122002/effective-strategies-for-full-stack-development-5617ad951781",
-    image: "src/assets/fullstack.png",
+    image: fullstack,
     description:
       "This blog outlines strategies for successful full-stack development, covering front-end and back-end essentials, stack selection, version control, responsive design, testing, performance optimization, and the importance of continuous learning.",
     stars:
