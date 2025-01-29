@@ -3,6 +3,7 @@ import Home from "./components/Home";
 import About from "./components/About";
 import Projects from "./components/Projects";
 // import Contact from "./components/Contact";
+import Blogs from "./components/Blogs";
 import Footer from "./components/Footer";
 import "./App.css";
 
@@ -27,6 +28,20 @@ function App() {
           className="transition duration-500 transform"
         >
           <Projects />
+        </section>
+        {/* <section
+          id="contact"
+          data-aos="fade-left"
+          className="transition duration-500 transform"
+          >
+          <Contact />
+          </section> */}
+        <section
+          id="blogs"
+          data-aos="fade-left"
+          className="transition duration-500 transform"
+        >
+          <Blogs />
         </section>
         <section
           id="footer"

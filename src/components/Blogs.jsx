@@ -1,12 +1,12 @@
 import React, { useState } from "react";
 
-const projects = [
+const blogs = [
   {
-    name: "FallSafe-yolov8",
-    link: "https://github.com/FallSafe/FallSafe-yolov8",
-    image: "src/assets/fallsafe.png",
+    name: "YOLOv8 — Experience and Conclusion",
+    image: "src/assets/yolov8.png",
+    link: "https://medium.com/@arbaaz14122002/yolov8-experience-and-conclusion-9c13b74ea668",
     description:
-      "A real-time fall detection system using computer vision and machine learning to analyze CCTV footage and alert caregivers for quicker emergency services.",
+      "This blog explores YOLOv8's advancements in real-time object detection, highlighting features like single-stage detection, better architecture, and versatility, with applications in security, healthcare, retail, and autonomous systems.",
     stars:
       "https://img.shields.io/github/stars/FallSafe/FallSafe-yolov8?style=flat-square&labelColor=343b41",
     forks:
@@ -17,11 +17,11 @@ const projects = [
       "https://img.shields.io/github/directory-file-count/FallSafe/FallSafe-yolov8?type=file&label=Files",
   },
   {
-    name: "PumpCare-Connect",
-    link: "https://github.com/SyedArbaazHussain/PumpCare-Connect",
-    image: "src/assets/pcc.png",
+    name: "The Evolution of React and Its Ecosystem",
+    link: "https://medium.com/@arbaaz14122002/the-evolution-of-react-and-its-ecosystem-f3927a70ebbb",
+    image: "src/assets/react.png",
     description:
-      "A comprehensive platform for managing and maintaining pump systems, including monitoring, scheduling maintenance, and generating reports.",
+      "This blog highlights React's evolution, key features, ecosystem tools like Redux, and innovations like Hooks, showcasing its impact on modern, scalable, and interactive UI development.",
     stars:
       "https://img.shields.io/github/stars/SyedArbaazHussain/PumpCare-Connect?style=flat-square&labelColor=343b41",
     forks:
@@ -32,11 +32,11 @@ const projects = [
       "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/PumpCare-Connect?type=file&label=Files",
   },
   {
-    name: "Portfolio",
-    link: "https://github.com/SyedArbaazHussain/Portfolio",
-    image: "src/assets/portfolio.png",
+    name: "Effective Strategies for Full-Stack Development",
+    link: "https://medium.com/@arbaaz14122002/effective-strategies-for-full-stack-development-5617ad951781",
+    image: "src/assets/fullstack.png",
     description:
-      "A showcase of various projects and skills, including web development, software and machine learning, providing insights into technologies and functionalities.",
+      "This blog outlines strategies for successful full-stack development, covering front-end and back-end essentials, stack selection, version control, responsive design, testing, performance optimization, and the importance of continuous learning.",
     stars:
       "https://img.shields.io/github/stars/SyedArbaazHussain/Portfolio?style=flat-square&labelColor=343b41",
     forks:
@@ -48,32 +48,32 @@ const projects = [
   },
 ];
 
-const Projects = () => {
+const Blogs = () => {
   const [prevIndex, setPrevIndex] = useState(1);
   const [currentIndex, setCurrentIndex] = useState(0);
   const [nextIndex, setNextIndex] = useState(2);
 
   const handleNext = () => {
     setPrevIndex((prevIndex) =>
-      prevIndex === 0 ? projects.length - 1 : prevIndex - 1
+      prevIndex === 0 ? blogs.length - 1 : prevIndex - 1
     );
     setCurrentIndex((currentIndex) =>
-      currentIndex === 0 ? projects.length - 1 : currentIndex - 1
+      currentIndex === 0 ? blogs.length - 1 : currentIndex - 1
     );
     setNextIndex((nextIndex) =>
-      nextIndex === 0 ? projects.length - 1 : nextIndex - 1
+      nextIndex === 0 ? blogs.length - 1 : nextIndex - 1
     );
   };
 
   const handlePrevious = () => {
     setPrevIndex((prevIndex) =>
-      prevIndex === projects.length - 1 ? 0 : prevIndex + 1
+      prevIndex === blogs.length - 1 ? 0 : prevIndex + 1
     );
     setCurrentIndex((currentIndex) =>
-      currentIndex === projects.length - 1 ? 0 : currentIndex + 1
+      currentIndex === blogs.length - 1 ? 0 : currentIndex + 1
     );
     setNextIndex((nextIndex) =>
-      nextIndex === projects.length - 1 ? 0 : nextIndex + 1
+      nextIndex === blogs.length - 1 ? 0 : nextIndex + 1
     );
   };
   return (
@@ -81,16 +81,16 @@ const Projects = () => {
       {/* GRID */}
       <div className="hidden max-md:flex flex-col items-center justify-center h-full w-full p-6">
         <h1 className="text-4xl max-sm:text-3xl max-md:text-4xl max-md:font-black font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
-          Projects
+          Blogs
         </h1>
         <div className="grid grid-cols-1 gap-6">
-          {projects.map((project, index) => (
+          {blogs.map((project, index) => (
             <div
               key={index}
               className="relative shadow-md rounded-lg p-6 flex flex-col items-center"
             >
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-30 rounded-lg"
+                className="absolute inset-0 bg-cover bg-center opacity-10 rounded-lg"
                 style={{
                   backgroundImage: `url(${project.image})`,
                 }}
@@ -109,7 +109,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                   className="text-blue-500 underline pb-4"
                 >
-                  View on GitHub
+                  View on Medium
                 </a>
                 <div className="flex flex-wrap justify-center gap-2 pt-5">
                   <img
@@ -142,7 +142,7 @@ const Projects = () => {
       {/* Carousel */}
       <div className="hidden md:flex flex-col items-center justify-center w-full">
         <h1 className="text-6xl max-lg:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
-          Projects
+          Blogs
         </h1>
         <div className="grid grid-cols-12 gap-5 max-lg:-mx-40 justify-center items-center">
           {/* Previous Project */}
@@ -157,15 +157,15 @@ const Projects = () => {
           >
             <div className="flex flex-col justify-center items-center p-6 bg-blue-300 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
               <img
-                src={projects[prevIndex].image}
+                src={blogs[prevIndex].image}
                 className="max-xl:hidden object-cover w-full rounded-3xl"
-                alt={projects[prevIndex].name}
+                alt={blogs[prevIndex].name}
               />
               <div className="p-7 flex flex-col items-center">
                 <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
-                  {projects[prevIndex].name}
+                  {blogs[prevIndex].name}
                 </h2>
-                {projects[prevIndex].description}
+                {blogs[prevIndex].description}
               </div>
             </div>
           </div>
@@ -177,41 +177,41 @@ const Projects = () => {
           >
             <div className="flex flex-col justify-center items-center p-6 bg-blue-300 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
               <img
-                src={projects[currentIndex].image}
+                src={blogs[currentIndex].image}
                 className="object-cover w-full rounded-3xl"
-                alt={projects[currentIndex].name}
+                alt={blogs[currentIndex].name}
               />
               <div className="pt-8 pb-1 flex flex-col justify-center items-center">
                 <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
-                  {projects[currentIndex].name}
+                  {blogs[currentIndex].name}
                 </h2>
-                <div>{projects[currentIndex].description}</div>
+                <div>{blogs[currentIndex].description}</div>
                 <a
-                  href={projects[currentIndex].link}
+                  href={blogs[currentIndex].link}
                   target="_blank"
                   rel="noopener noreferrer"
                   className="mt-7 bg-blue-900 dark:bg-blue-400 py-2 px-4 mx-1 rounded-full text-white dark:text-black hover:bg-blue-600 dark:hover:bg-blue-400"
                 >
-                  View on GitHub
+                  View on Medium
                 </a>
                 <div className="flex flex-wrap justify-center gap-2 pt-5">
                   <img
-                    src={projects[currentIndex].stars}
+                    src={blogs[currentIndex].stars}
                     className="w-fit h-fit"
                     alt="Stars"
                   />
                   <img
-                    src={projects[currentIndex].forks}
+                    src={blogs[currentIndex].forks}
                     className="w-fit h-fit"
                     alt="Forks"
                   />
                   <img
-                    src={projects[currentIndex].folders}
+                    src={blogs[currentIndex].folders}
                     className="w-fit h-fit"
                     alt="Folders"
                   />
                   <img
-                    src={projects[currentIndex].files}
+                    src={blogs[currentIndex].files}
                     className="w-fit h-fit"
                     alt="Files"
                   />
@@ -232,15 +232,15 @@ const Projects = () => {
           >
             <div className="flex flex-col justify-center items-center p-6 bg-blue-300 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
               <img
-                src={projects[nextIndex].image}
+                src={blogs[nextIndex].image}
                 className="max-xl:hidden object-cover w-full rounded-3xl"
-                alt={projects[nextIndex].name}
+                alt={blogs[nextIndex].name}
               />
               <div className="p-7 flex flex-col items-center">
                 <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
-                  {projects[nextIndex].name}
+                  {blogs[nextIndex].name}
                 </h2>
-                {projects[nextIndex].description}
+                {blogs[nextIndex].description}
               </div>
             </div>
           </div>
@@ -264,4 +264,4 @@ const Projects = () => {
   );
 };
 
-export default Projects;
+export default Blogs;

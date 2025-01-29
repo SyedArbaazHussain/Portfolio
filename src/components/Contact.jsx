@@ -46,33 +46,8 @@ const socials = [
 ];
 
 const Contact = () => {
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    message: "",
-  });
-
-  const [isSubmitted, setIsSubmitted] = useState(false);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    setIsSubmitted(true);
-    setTimeout(() => {
-      setIsSubmitted(false);
-      setFormData({ name: "", email: "", message: "" });
-    }, 3000);
-  };
-
   return (
-    <div className="grid mt-7 px-10 justify-center items-center text-center gap-2 lg:gap-5 grid-cols-subgrid grid-rows-subgrid">
+    <div className="grid mt-7 px-10 justify-center items-center text-center gap-2 lg:gap-5 grid-flow-col">
       {socials.map((social) => (
         <a
           href={social.link}
