@@ -108,6 +108,12 @@ const NavBar = () => {
               >
                 CONTACT
               </button> */}
+              <button
+                onClick={() => (window.location.href = "#blogs")}
+                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 transition duration-300"
+              >
+                BLOGS
+              </button>
             </div>
           </div>
         )}
