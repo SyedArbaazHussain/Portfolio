@@ -4,7 +4,7 @@ import Contact from "./Contact";
 
 const Home = () => {
   return (
-    <div className="max-lg:flex max-lg:flex-col  lg:grid lg:grid-cols-11  justify-center items-center w-full h-full lg:mt-44 md:mt-40 mt-32 px-10">
+    <div className="max-lg:flex max-lg:flex-col  lg:grid lg:grid-cols-11  justify-center items-center w-full h-full lg:mt-44 md:mt-40 mt-32 px-20">
       <img
         src={headImg}
         alt="Syed Arbaaz Hussain"

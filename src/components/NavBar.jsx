@@ -86,31 +86,31 @@ const NavBar = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => (window.location.href = "#")}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 transition duration-300"
+                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 HOME
               </button>
               <button
                 onClick={() => (window.location.href = "#about")}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 transition duration-300"
+                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 ABOUT
               </button>
               <button
                 onClick={() => (window.location.href = "#projects")}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 transition duration-300"
+                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 PROJECTS
               </button>
               {/* <button
                 onClick={() => (window.location.href = "#contact")}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 transition duration-300"
+                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 CONTACT
               </button> */}
               <button
                 onClick={() => (window.location.href = "#blogs")}
-                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white hover:bg-gray-200 transition duration-300"
+                className="block w-full text-left px-3 py-2 text-base font-medium text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 BLOGS
               </button>
