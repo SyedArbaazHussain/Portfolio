@@ -34,7 +34,7 @@ const NavBar = () => {
 
   return (
     <>
-      <nav className="z-50 sticky top-20 px-2 w-fit rounded-full transition-all duration-500 ease-in-out h-0">
+      <nav className="z-50 sticky top-20 ml-32 max-sm:ml-7 max-md:ml-10 max-lg:ml-20 w-fit rounded-full transition-all duration-500 ease-in-out h-0">
         <div className="max-sm:flex-row-reverse flex justify-center items-center px-0 mx-auto">
           {/* Mobile Menu Button */}
           <div className="flex gap-4 max-sm:m-0">
@@ -81,7 +81,7 @@ const NavBar = () => {
         {isMenuOpen && (
           <div
             ref={menuRef}
-            className="max-sm:ml-7 absolute inset-x-0 bg-white dark:bg-blue-900 bg-opacity-50 dark:bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-md rounded-3xl transition-transform duration-500 ease-in-out"
+            className="max-sm:ml-7 absolute inset-x-0 bg-white dark:bg-blue-900 bg-opacity-50 dark:bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-md rounded-3xl transition-transform duration-500 ease-in-out mt-2"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button

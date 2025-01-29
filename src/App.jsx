@@ -10,7 +10,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="transition duration-1000 transform lg:px-20 md:px-10 px-5 bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white">
+      <div className="transition duration-1000 transform bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white">
         <NavBar />
         <section id="" className="transition duration-500 transform">
           <Home />

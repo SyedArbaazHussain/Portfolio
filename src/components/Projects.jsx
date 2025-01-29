@@ -93,7 +93,7 @@ const Projects = () => {
               className="relative shadow-md rounded-lg p-6 flex flex-col items-center"
             >
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-30 rounded-lg"
+                className="absolute inset-0 bg-cover bg-center dark:opacity-30 opacity-20 rounded-lg"
                 style={{
                   backgroundImage: `url(${project.image})`,
                 }}
@@ -143,11 +143,11 @@ const Projects = () => {
       </div>
 
       {/* Carousel */}
-      <div className="hidden md:flex flex-col items-center justify-center w-full">
+      <div className="hidden md:flex flex-col items-center justify-center w-full px-10">
         <h1 className="text-6xl max-lg:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
           Projects
         </h1>
-        <div className="grid grid-cols-12 gap-5 max-lg:-mx-40 justify-center items-center">
+        <div className="grid grid-cols-12 gap-5  xl:-mx-32 max-xl:-mx-60 justify-center items-center">
           {/* Previous Project */}
           <div
             className="relative w-full pt-10 pb-20 transition-opacity duration-500 col-span-3"
@@ -250,18 +250,24 @@ const Projects = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <button
-          onClick={handlePrevious}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 bg-gray-800 dark:bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-700"
-        >
-          &#8592;
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 bg-gray-800 dark:bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-700"
-        >
-          &#8594;
-        </button>
+        <div className="absolute w-full">
+          <a
+            onClick={handlePrevious}
+            className="z-10 absolute top-1/2 left-0 transform -translate-y-1/2 p-3 px-7 mx-20 
+          bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
+          hover:bg-gray-700 dark:bg-gray-600 cursor-pointer"
+          >
+            {/* &#8592;  */}◀
+          </a>
+          <a
+            onClick={handleNext}
+            className="z-10 absolute top-1/2 right-0 transform -translate-y-1/2 p-3 px-7 mx-20 
+            bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
+            hover:bg-gray-400 dark:bg-gray-600 cursor-pointer"
+          >
+            {/* &#8594;  */}▶
+          </a>
+        </div>
       </div>
     </div>
   );

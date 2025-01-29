@@ -1,7 +1,7 @@
 import React, { useState } from "react";
-import yolov8 from "../assets/yolov8.png"
-import react from "../assets/react.png"
-import fullstack from "../assets/fullstack.png"
+import yolov8 from "../assets/yolov8.png";
+import react from "../assets/react.png";
+import fullstack from "../assets/fullstack.png";
 
 const blogs = [
   {
@@ -10,14 +10,6 @@ const blogs = [
     link: "https://medium.com/@arbaaz14122002/yolov8-experience-and-conclusion-9c13b74ea668",
     description:
       "This blog explores YOLOv8's advancements in real-time object detection, highlighting features like single-stage detection, better architecture, and versatility, with applications in security, healthcare, retail, and autonomous systems.",
-    stars:
-      "https://img.shields.io/github/stars/FallSafe/FallSafe-yolov8?style=flat-square&labelColor=343b41",
-    forks:
-      "https://img.shields.io/github/forks/FallSafe/FallSafe-yolov8?style=flat-square&labelColor=343b41",
-    folders:
-      "https://img.shields.io/github/directory-file-count/FallSafe/FallSafe-yolov8?type=dir&label=Folders",
-    files:
-      "https://img.shields.io/github/directory-file-count/FallSafe/FallSafe-yolov8?type=file&label=Files",
   },
   {
     name: "The Evolution of React and Its Ecosystem",
@@ -25,14 +17,6 @@ const blogs = [
     image: react,
     description:
       "This blog highlights React's evolution, key features, ecosystem tools like Redux, and innovations like Hooks, showcasing its impact on modern, scalable, and interactive UI development.",
-    stars:
-      "https://img.shields.io/github/stars/SyedArbaazHussain/PumpCare-Connect?style=flat-square&labelColor=343b41",
-    forks:
-      "https://img.shields.io/github/forks/SyedArbaazHussain/PumpCare-Connect?style=flat-square&labelColor=343b41",
-    folders:
-      "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/PumpCare-Connect?type=dir&label=Folders",
-    files:
-      "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/PumpCare-Connect?type=file&label=Files",
   },
   {
     name: "Effective Strategies for Full-Stack Development",
@@ -40,14 +24,6 @@ const blogs = [
     image: fullstack,
     description:
       "This blog outlines strategies for successful full-stack development, covering front-end and back-end essentials, stack selection, version control, responsive design, testing, performance optimization, and the importance of continuous learning.",
-    stars:
-      "https://img.shields.io/github/stars/SyedArbaazHussain/Portfolio?style=flat-square&labelColor=343b41",
-    forks:
-      "https://img.shields.io/github/forks/SyedArbaazHussain/Portfolio?style=flat-square&labelColor=343b41",
-    folders:
-      "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/Portfolio?type=dir&label=Folders",
-    files:
-      "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/Portfolio?type=file&label=Files",
   },
 ];
 
@@ -114,28 +90,6 @@ const Blogs = () => {
                 >
                   View on Medium
                 </a>
-                <div className="flex flex-wrap justify-center gap-2 pt-5">
-                  <img
-                    src={project.stars}
-                    className="w-fit h-fit"
-                    alt="Stars"
-                  />
-                  <img
-                    src={project.forks}
-                    className="w-fit h-fit"
-                    alt="Forks"
-                  />
-                  <img
-                    src={project.folders}
-                    className="w-fit h-fit"
-                    alt="Folders"
-                  />
-                  <img
-                    src={project.files}
-                    className="w-fit h-fit"
-                    alt="Files"
-                  />
-                </div>
               </div>
             </div>
           ))}
@@ -143,11 +97,11 @@ const Blogs = () => {
       </div>
 
       {/* Carousel */}
-      <div className="hidden md:flex flex-col items-center justify-center w-full">
+      <div className="hidden md:flex flex-col items-center justify-center w-full px-10">
         <h1 className="text-6xl max-lg:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
           Blogs
         </h1>
-        <div className="grid grid-cols-12 gap-5 max-lg:-mx-40 justify-center items-center">
+        <div className="grid grid-cols-12 gap-5 xl:-mx-32 max-xl:-mx-60 justify-center items-center">
           {/* Previous Project */}
           <div
             className="relative w-full pt-10 pb-20 transition-opacity duration-500 col-span-3"
@@ -197,28 +151,6 @@ const Blogs = () => {
                 >
                   View on Medium
                 </a>
-                <div className="flex flex-wrap justify-center gap-2 pt-5">
-                  <img
-                    src={blogs[currentIndex].stars}
-                    className="w-fit h-fit"
-                    alt="Stars"
-                  />
-                  <img
-                    src={blogs[currentIndex].forks}
-                    className="w-fit h-fit"
-                    alt="Forks"
-                  />
-                  <img
-                    src={blogs[currentIndex].folders}
-                    className="w-fit h-fit"
-                    alt="Folders"
-                  />
-                  <img
-                    src={blogs[currentIndex].files}
-                    className="w-fit h-fit"
-                    alt="Files"
-                  />
-                </div>
               </div>
             </div>
           </div>
@@ -227,7 +159,7 @@ const Blogs = () => {
           <div
             className="relative w-full pt-10 pb-20 transition-opacity duration-500 col-span-3"
             style={{
-              opacity: 0.5, // Fully visible
+              opacity: 0.5,
               transform: "scale(0.9)",
               maskImage: "linear-gradient(to left, transparent, black)",
               WebkitMaskImage: "linear-gradient(to left, transparent, black)",
@@ -250,18 +182,24 @@ const Blogs = () => {
         </div>
 
         {/* Navigation Buttons */}
-        <button
-          onClick={handlePrevious}
-          className="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 bg-gray-800 dark:bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-700"
-        >
-          &#8592;
-        </button>
-        <button
-          onClick={handleNext}
-          className="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 bg-gray-800 dark:bg-gray-600 text-white rounded-full shadow-lg hover:bg-gray-700"
-        >
-          &#8594;
-        </button>
+        <div className="absolute w-full">
+          <a
+            onClick={handlePrevious}
+            className="z-10 absolute top-1/2 left-0 transform -translate-y-1/2 p-3 px-7 mx-20 
+          bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
+          hover:bg-gray-700 dark:bg-gray-600 cursor-pointer"
+          >
+            {/* &#8592;  */}◀
+          </a>
+          <a
+            onClick={handleNext}
+            className="z-10 absolute top-1/2 right-0 transform -translate-y-1/2 p-3 px-7 mx-20 
+            bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
+            hover:bg-gray-400 dark:bg-gray-600 cursor-pointer"
+          >
+            {/* &#8594;  */}▶
+          </a>
+        </div>
       </div>
     </div>
   );
