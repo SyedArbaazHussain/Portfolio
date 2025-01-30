@@ -8,7 +8,7 @@ const Footer = () => {
           &copy; {new Date().getFullYear()} Syed Arbaaz Hussain. All rights
           reserved.
         </p>
-        <div className="flex justify-center space-x-6">
+        <div className="flex flex-col md:flex-row justify-center gap-1 md:gap-5">
           <a
             href="https://github.com/SyedArbaazHussain/"
             target="_blank"
