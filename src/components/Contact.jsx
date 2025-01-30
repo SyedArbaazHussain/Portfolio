@@ -47,17 +47,31 @@ const socials = [
 
 const Contact = () => {
   return (
-    <div className="grid mt-7 px-10 justify-center items-center text-center gap-2 lg:gap-5 grid-flow-col">
-      {socials.map((social) => (
-        <a
-          href={social.link}
-          alt={social.alt}
-          title={social.alt}
-          key={social.name}
-        >
-          <img src={social.icon} alt={social.alt} className="max-h-12" />
-        </a>
-      ))}
+    <div>
+      <div className="hidden mt-7 max-sm:flex max-sm:flex-row max-sm:flex-wrap justify-center items-center text-center gap-3">
+        {socials.map((social) => (
+          <a
+            href={social.link}
+            alt={social.alt}
+            title={social.alt}
+            key={social.name}
+          >
+            <img src={social.icon} alt={social.alt} className="max-h-10" />
+          </a>
+        ))}
+      </div>
+      <div className="hidden sm:grid mt-7 sm:px-10 justify-center items-center text-center gap-2 lg:gap-5 grid-flow-col">
+        {socials.map((social) => (
+          <a
+            href={social.link}
+            alt={social.alt}
+            title={social.alt}
+            key={social.name}
+          >
+            <img src={social.icon} alt={social.alt} className="max-h-12" />
+          </a>
+        ))}
+      </div>
     </div>
   );
 };

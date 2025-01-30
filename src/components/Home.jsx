@@ -4,15 +4,15 @@ import Contact from "./Contact";
 
 const Home = () => {
   return (
-    <div className="max-lg:flex max-lg:flex-col  lg:grid lg:grid-cols-11  justify-center items-center w-full h-full lg:mt-44 md:mt-40 mt-32 px-20">
+    <div className="max-lg:flex max-lg:flex-col  lg:grid lg:grid-cols-11  justify-center items-center w-full h-full lg:mt-44 md:mt-40 mt-32 md:px-20 max-md:px-8">
       <img
         src={headImg}
         alt="Syed Arbaaz Hussain"
-        className="rounded-full p-10 m-auto max-lg:max-h-96 h-fit md:col-span-5"
+        className="rounded-full max-lg:my-10 max-lg:max-h-96 h-fit md:col-span-5 lg:p-10 "
       />
       <div className="flex flex-col justify-center items-center h-full w-full px-4 xl:px-0 md:col-span-6">
         <div className="text-center w-full">
-          <h1 className="text-6xl max-xl:text-5xl max-lg:text-5xl max-md:text-5xl max-sm:text-5xl font-bold my-4">
+          <h1 className="text-6xl max-xl:text-5xl max-lg:text-5xl max-md:text-5xl max-sm:text-4xl font-bold my-4">
             Hello, <br></br>I&apos;m{" "}
             <span className="leading-relaxed text-blue-700">
               Syed Arbaaz Hussain
