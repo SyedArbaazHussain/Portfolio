@@ -80,10 +80,10 @@ const Projects = () => {
     );
   };
   return (
-    <div className="flex mt-10 w-full justify-center flex-col text-center overflow-hidden max-sm:px-5 max-md:px-20">
+    <div className="flex w-full justify-center flex-col text-center overflow-hidden max-sm:px-5 max-md:px-20">
       {/* GRID */}
-      <div className="hidden max-md:flex flex-col items-center justify-center h-full w-full p-6">
-        <h1 className="text-4xl max-sm:text-3xl max-md:text-4xl max-md:font-black font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
+      <div className="hidden max-md:flex flex-col items-center justify-center h-full w-full px-6">
+        <h1 className="text-4xl max-sm:text-3xl max-md:text-4xl max-md:font-black font-bold text-center text-gray-800 dark:text-gray-200">
           Projects
         </h1>
         <div className="grid grid-cols-1 gap-6">
@@ -147,7 +147,7 @@ const Projects = () => {
         <h1 className="text-6xl max-lg:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
           Projects
         </h1>
-        <div className="grid grid-cols-12 gap-5  xl:-mx-32 max-xl:-mx-60 justify-center items-center">
+        <div className="grid grid-cols-12 gap-5 max-xl:-mx-60 justify-center items-center">
           {/* Previous Project */}
           <div
             className="relative w-full pt-10 pb-20 transition-opacity duration-500 col-span-3"

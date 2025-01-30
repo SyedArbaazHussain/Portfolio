@@ -101,7 +101,7 @@ const Blogs = () => {
         <h1 className="text-6xl max-lg:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
           Blogs
         </h1>
-        <div className="grid grid-cols-12 gap-5 xl:-mx-32 max-xl:-mx-60 justify-center items-center">
+        <div className="grid grid-cols-12 gap-5 max-xl:-mx-60 justify-center items-center">
           {/* Previous Project */}
           <div
             className="relative w-full pt-10 pb-20 transition-opacity duration-500 col-span-3"
