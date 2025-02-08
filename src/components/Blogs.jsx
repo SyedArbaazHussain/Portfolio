@@ -112,7 +112,7 @@ const Blogs = () => {
               WebkitMaskImage: "linear-gradient(to right, transparent, black)",
             }}
           >
-            <div className="flex flex-col justify-center items-center p-6 bg-blue-300 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
+            <div className="flex flex-col justify-center items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
               <img
                 src={blogs[prevIndex].image}
                 className="max-xl:hidden object-cover w-full rounded-3xl"
@@ -132,7 +132,7 @@ const Blogs = () => {
             className="relative w-full pt-10 pb-20 col-span-6 transition-opacity duration-500"
             style={{ opacity: 1, transform: "scale(1)" }}
           >
-            <div className="flex flex-col justify-center items-center p-6 bg-blue-300 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
+            <div className="flex flex-col justify-center items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
               <img
                 src={blogs[currentIndex].image}
                 className="object-cover w-full rounded-3xl"
@@ -165,7 +165,7 @@ const Blogs = () => {
               WebkitMaskImage: "linear-gradient(to left, transparent, black)",
             }}
           >
-            <div className="flex flex-col justify-center items-center p-6 bg-blue-300 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
+            <div className="flex flex-col justify-center items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
               <img
                 src={blogs[nextIndex].image}
                 className="max-xl:hidden object-cover w-full rounded-3xl"

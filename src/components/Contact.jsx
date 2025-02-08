@@ -46,7 +46,9 @@ const socials = [
 const Contact = () => {
   return (
     <div>
-      <div className="hidden mt-7 max-lg:flex max-lg:flex-row max-lg:flex-wrap justify-center items-center text-center gap-3">
+            <div className="hidden mt-7 max-sm:flex max-sm:flex-row max-sm:flex-wrap justify-center items-center text-center gap-3">
+
+      {/* <div className="hidden mt-7 max-lg:flex max-lg:flex-row max-lg:flex-wrap justify-center items-center text-center gap-3"> */}
         {socials.map((social) => (
           <a
             href={social.link}
@@ -62,23 +64,24 @@ const Contact = () => {
   );
 };
 
-const ContactSticky = () => {
-  return (
-    <div className="z-50 sticky lg:top-10 lg:rounded-full lg:transition-all lg:duration-500 lg:ease-in-out h-0">
-      <div className="hidden lg:flex pt-52 lg:px-10 gap-2 lg:gap-5 flex-col justify-items-end items-end">
-        {socials.map((social) => (
-          <a
-            href={social.link}
-            alt={social.alt}
-            title={social.alt}
-            key={social.name}
-          >
-            <img src={social.icon} alt={social.alt} className="max-h-12" />
-          </a>
-        ))}
-      </div>
-    </div>
-  );
-};
+// const ContactSticky = () => {
+//   return (
+//     <div className="z-50 sticky lg:top-10 lg:rounded-full lg:transition-all lg:duration-500 lg:ease-in-out h-0">
+//       <div className="hidden lg:flex pt-52 lg:px-10 gap-2 lg:gap-5 flex-col justify-items-end items-end">
+//         {socials.map((social) => (
+//           <a
+//             href={social.link}
+//             alt={social.alt}
+//             title={social.alt}
+//             key={social.name}
+//           >
+//             <img src={social.icon} alt={social.alt} className="max-h-12" />
+//           </a>
+//         ))}
+//       </div>
+//     </div>
+//   );
+// };
 
-export default { Contact, ContactSticky };
+// export default { Contact, ContactSticky };
+export default Contact;

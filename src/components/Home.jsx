@@ -1,6 +1,6 @@
 import React from "react";
 import headImg from "/me-head.jpg";
-import ContactSticky from "./Contact";
+import Contact from "./Contact";
 
 const Home = () => {
   return (
