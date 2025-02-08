@@ -21,18 +21,18 @@ const projects = [
   },
   {
     name: "PumpCare-Connect",
-    link: "https://github.com/SyedArbaazHussain/PumpCare-Connect",
+    link: "https://github.com/SyedArbaazHussain/PumpCare-Connect-Old",
     image: pcc,
     description:
       "A comprehensive platform for managing and maintaining pump systems, including monitoring, scheduling maintenance, and generating reports.",
     stars:
-      "https://img.shields.io/github/stars/SyedArbaazHussain/PumpCare-Connect?style=flat-square&labelColor=343b41",
+      "https://img.shields.io/github/stars/SyedArbaazHussain/PumpCare-Connect-Old?style=flat-square&labelColor=343b41",
     forks:
-      "https://img.shields.io/github/forks/SyedArbaazHussain/PumpCare-Connect?style=flat-square&labelColor=343b41",
+      "https://img.shields.io/github/forks/SyedArbaazHussain/PumpCare-Connect-Old?style=flat-square&labelColor=343b41",
     folders:
-      "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/PumpCare-Connect?type=dir&label=Folders",
+      "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/PumpCare-Connect-Old?type=dir&label=Folders",
     files:
-      "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/PumpCare-Connect?type=file&label=Files",
+      "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/PumpCare-Connect-Old?type=file&label=Files",
   },
   {
     name: "Portfolio",

@@ -46,7 +46,7 @@ const socials = [
 const Contact = () => {
   return (
     <div>
-      <div className="hidden mt-7 max-sm:flex max-sm:flex-row max-sm:flex-wrap justify-center items-center text-center gap-3">
+      <div className="hidden mt-7 max-lg:flex max-lg:flex-row max-lg:flex-wrap justify-center items-center text-center gap-3">
         {socials.map((social) => (
           <a
             href={social.link}
@@ -58,7 +58,14 @@ const Contact = () => {
           </a>
         ))}
       </div>
-      <div className="hidden sm:grid mt-7 sm:px-10 justify-center items-center text-center gap-2 lg:gap-5 grid-flow-col">
+    </div>
+  );
+};
+
+const ContactSticky = () => {
+  return (
+    <div className="z-50 sticky lg:top-10 lg:rounded-full lg:transition-all lg:duration-500 lg:ease-in-out h-0">
+      <div className="hidden lg:flex pt-52 lg:px-10 gap-2 lg:gap-5 flex-col justify-items-end items-end">
         {socials.map((social) => (
           <a
             href={social.link}
@@ -74,4 +81,4 @@ const Contact = () => {
   );
 };
 
-export default Contact;
+export default { Contact, ContactSticky };

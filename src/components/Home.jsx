@@ -1,6 +1,6 @@
 import React from "react";
 import headImg from "/me-head.jpg";
-import Contact from "./Contact";
+import ContactSticky from "./Contact";
 
 const Home = () => {
   return (
@@ -50,7 +50,9 @@ const Home = () => {
               BLOGS
             </button>
           </div>
-          <Contact />
+          <div className="lg:hidden">
+            <Contact />
+          </div>
         </div>
       </div>
     </div>
