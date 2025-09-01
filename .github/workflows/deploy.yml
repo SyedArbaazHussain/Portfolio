@@ -13,7 +13,7 @@ jobs:
     steps:
       # Checkout the repository
       - name: Checkout repo
-        uses: actions/checkout@v4
+        uses: actions/checkout@v5
 
       # Setup Bun using the official action
       - name: Setup Bun
@@ -24,9 +24,10 @@ jobs:
         run: |
           bun install || npm install
 
-      # Updates
-      - name: Install dependencies
+      # Update browserslist DB (optional but safe)
+      - name: Update browserslist DB
         run: npx update-browserslist-db@latest
+        continue-on-error: true
 
       # Build the project using Bun
       - name: Build project
@@ -34,7 +35,7 @@ jobs:
 
       # Upload production-ready build files
       - name: Upload production-ready build files
-        uses: actions/upload-pages-artifact@v3
+        uses: actions/upload-pages-artifact@v4
         with:
           path: ./dist
 

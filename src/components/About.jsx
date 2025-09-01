@@ -1,5 +1,8 @@
 import React from "react";
-import IBM from "../assets/ibm_icon";
+import IBM from "../assets/ibm.svg";
+import AS400 from "../assets/AS400.svg";
+import DB2400 from "../assets/DB2400.svg";
+import OS400 from "../assets/OS400.svg";
 
 const About = () => {
   const tools = [
@@ -14,6 +17,10 @@ const About = () => {
           name: "Windows",
           icon: "https://img.icons8.com/?size=40&id=YJfJ0JM5Imsj&format=png&color=000000",
         },
+        {
+          name: "OS400",
+          icon: OS400
+        }
       ],
     },
     {
@@ -22,6 +29,10 @@ const About = () => {
         {
           name: "IBM iSystems",
           icon: IBM
+        },
+        {
+          name: "AS400",
+          icon: AS400
         },
         {
           name: "Python",
@@ -71,6 +82,10 @@ const About = () => {
         {
           name: "MongoDB",
           icon: "https://img.icons8.com/color/40/000000/mongodb.png",
+        },
+        {
+          name: "DB2/400",
+          icon: DB2400,
         },
         // {
         //   name: "Redis",
