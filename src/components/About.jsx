@@ -20,7 +20,7 @@ const About = () => {
       items: [
         {
           name: "IBM iSystems",
-          icon: "/src/assets/ibm_icon_130909.svg",
+          icon: "src/assets/ibm_icon_130909.svg",
         },
         {
           name: "Python",
