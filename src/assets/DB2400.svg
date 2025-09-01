@@ -8,7 +8,7 @@
 
     @media (prefers-color-scheme: light) {
       .db2400 {
-        fill: #3b82f6;
+        fill: #1e40af;
       }
     }
 
