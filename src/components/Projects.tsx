@@ -14,7 +14,7 @@ interface Project {
   files: string;
 }
 
-const projects: Project[] = [
+const projectList: Project[] = [
   {
     name: "FallSafe-yolov8",
     link: "https://github.com/FallSafe/FallSafe-yolov8",
@@ -68,15 +68,15 @@ const Projects: React.FC = () => {
   const [nextIndex, setNextIndex] = useState(2);
 
   const handleNext = () => {
-    setPrevIndex(prevIndex === 0 ? projects.length - 1 : prevIndex - 1);
-    setCurrentIndex(currentIndex === 0 ? projects.length - 1 : currentIndex - 1);
-    setNextIndex(nextIndex === 0 ? projects.length - 1 : nextIndex - 1);
+    setPrevIndex(prevIndex === 0 ? projectList.length - 1 : prevIndex - 1);
+    setCurrentIndex(currentIndex === 0 ? projectList.length - 1 : currentIndex - 1);
+    setNextIndex(nextIndex === 0 ? projectList.length - 1 : nextIndex - 1);
   };
 
   const handlePrevious = () => {
-    setPrevIndex(prevIndex === projects.length - 1 ? 0 : prevIndex + 1);
-    setCurrentIndex(currentIndex === projects.length - 1 ? 0 : currentIndex + 1);
-    setNextIndex(nextIndex === projects.length - 1 ? 0 : nextIndex + 1);
+    setPrevIndex(prevIndex === projectList.length - 1 ? 0 : prevIndex + 1);
+    setCurrentIndex(currentIndex === projectList.length - 1 ? 0 : currentIndex + 1);
+    setNextIndex(nextIndex === projectList.length - 1 ? 0 : nextIndex + 1);
   };
   
     return (
@@ -87,7 +87,7 @@ const Projects: React.FC = () => {
             Projects
           </h1>
           <div className="grid grid-cols-1 gap-6">
-            {projects.map((project, index) => (
+            {projectList.map((project, index) => (
               <div
                 key={index}
                 className="relative shadow-md rounded-lg p-6 flex flex-col items-center"
@@ -141,15 +141,15 @@ const Projects: React.FC = () => {
             >
               <div className="flex flex-col items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
                 <img
-                  src={projects[prevIndex].image}
+                  src={projectList[prevIndex].image}
                   className="hidden xl:block object-cover w-full rounded-3xl"
                   alt={projects[prevIndex].name}
                 />
                 <div className="p-7">
                   <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4">
-                    {projects[prevIndex].name}
+                    {projectList[prevIndex].name}
                   </h2>
-                  <p>{projects[prevIndex].description}</p>
+                  <p>{projectList[prevIndex].description}</p>
                 </div>
               </div>
             </div>
@@ -161,17 +161,17 @@ const Projects: React.FC = () => {
             >
               <div className="flex flex-col items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
                 <img
-                  src={projects[currentIndex].image}
+                  src={projectList[currentIndex].image}
                   className="object-cover w-full rounded-3xl"
-                  alt={projects[currentIndex].name}
+                  alt={projectList[currentIndex].name}
                 />
                 <div className="pt-8 pb-1 flex flex-col items-center">
                   <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4">
-                    {projects[currentIndex].name}
+                    {projectList[currentIndex].name}
                   </h2>
-                  <p>{projects[currentIndex].description}</p>
+                  <p>{projectList[currentIndex].description}</p>
                   <a
-                    href={projects[currentIndex].link}
+                    href={projectList[currentIndex].link}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="mt-7 bg-blue-900 dark:bg-blue-400 py-2 px-4 mx-1 rounded-full text-white dark:text-black hover:bg-blue-600 dark:hover:bg-blue-400"
@@ -179,10 +179,10 @@ const Projects: React.FC = () => {
                     View on GitHub
                   </a>
                   <div className="flex flex-wrap justify-center gap-2 pt-5">
-                    <img src={projects[currentIndex].stars} className="h-fit w-fit" alt="Stars" />
-                    <img src={projects[currentIndex].forks} className="h-fit w-fit" alt="Forks" />
-                    <img src={projects[currentIndex].folders} className="h-fit w-fit" alt="Folders" />
-                    <img src={projects[currentIndex].files} className="h-fit w-fit" alt="Files" />
+                    <img src={projectList[currentIndex].stars} className="h-fit w-fit" alt="Stars" />
+                    <img src={projectList[currentIndex].forks} className="h-fit w-fit" alt="Forks" />
+                    <img src={projectList[currentIndex].folders} className="h-fit w-fit" alt="Folders" />
+                    <img src={projectList[currentIndex].files} className="h-fit w-fit" alt="Files" />
                   </div>
                 </div>
               </div>
@@ -200,15 +200,15 @@ const Projects: React.FC = () => {
             >
               <div className="flex flex-col items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
                 <img
-                  src={projects[nextIndex].image}
+                  src={projectList[nextIndex].image}
                   className="hidden xl:block object-cover w-full rounded-3xl"
-                  alt={projects[nextIndex].name}
+                  alt={projectList[nextIndex].name}
                 />
                 <div className="p-7">
                   <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4">
-                    {projects[nextIndex].name}
+                    {projectList[nextIndex].name}
                   </h2>
-                  <p>{projects[nextIndex].description}</p>
+                  <p>{projectList[nextIndex].description}</p>
                 </div>
               </div>
             </div>
@@ -234,4 +234,4 @@ const Projects: React.FC = () => {
     );
   };
   
-  export default ProjectsLayout;
+  export default Projects;
