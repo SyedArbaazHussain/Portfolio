@@ -4,11 +4,10 @@
 
 @layer utilities {
     .cursor-light {
-      cursor: url('/assets/cursor-light.svg') 16 16, auto;
+      cursor: url('/cursor-light.svg') 16 16, auto;
     }
-  
     .cursor-dark {
-      cursor: url('/assets/cursor-dark.svg') 16 16, auto;
+      cursor: url('/cursor-dark.svg') 16 16, auto;
     }
   }
   
