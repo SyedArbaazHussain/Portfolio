@@ -1,5 +1,5 @@
 import React from "react";
-import IBM from "../assets/ibm_icon";
+import IBM from "../assets/ibm.svg";
 
 const About = () => {
   const tools = [
