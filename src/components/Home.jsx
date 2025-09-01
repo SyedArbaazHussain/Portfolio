@@ -27,25 +27,25 @@ const Home = () => {
           <div className="flex flex-wrap justify-center items-center gap-5 max-sm:gap-3 max-sm:flex-row pt-5">
             <button
               onClick={() => (window.location.href = "#about")}
-              className="bg-blue-700 px-5 py-3 max-md:px-3 max-md:py-2 max-lg:px-4 max-lg:py-2 max-md:text-base max-lg:text-xl text-2xl rounded-full font-black max-md:font-medium max-lg:font-semibold max-xl:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl"
+              className="bg-blue-700 px-5 py-3 max-md:px-3 max-md:py-2 max-lg:px-4 max-lg:py-2 max-md:text-base max-lg:text-xl text-2xl rounded-full font-black max-md:font-medium max-lg:font-semibold max-xl:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl cursor-hand-light dark:cursor-hand-dark"
             >
               ABOUT
             </button>
             <button
               onClick={() => (window.location.href = "#projects")}
-              className="bg-blue-700 px-5 py-3 max-md:px-3 max-md:py-2 max-lg:px-4 max-lg:py-2 max-md:text-base max-lg:text-xl text-2xl rounded-full font-black max-md:font-medium max-lg:font-semibold max-xl:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl"
+              className="bg-blue-700 px-5 py-3 max-md:px-3 max-md:py-2 max-lg:px-4 max-lg:py-2 max-md:text-base max-lg:text-xl text-2xl rounded-full font-black max-md:font-medium max-lg:font-semibold max-xl:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl  cursor-hand-light dark:cursor-hand-dark"
             >
               PROJECTS
             </button>
             {/* <button
               onClick={() => (window.location.href = "#contact")}
-              className="bg-blue-700 px-5 py-3 max-md:px-3 max-md:py-2 max-lg:px-4 max-lg:py-2 max-md:text-base max-lg:text-xl text-2xl rounded-full font-black max-md:font-medium max-lg:font-semibold max-xl:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl"
+              className="bg-blue-700 px-5 py-3 max-md:px-3 max-md:py-2 max-lg:px-4 max-lg:py-2 max-md:text-base max-lg:text-xl text-2xl rounded-full font-black max-md:font-medium max-lg:font-semibold max-xl:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl  cursor-hand-light dark:cursor-hand-dark"
             >
               CONTACT
             </button> */}
             <button
               onClick={() => (window.location.href = "#blogs")}
-              className="bg-blue-700 px-5 py-3 max-md:px-3 max-md:py-2 max-lg:px-4 max-lg:py-2 max-md:text-base max-lg:text-xl text-2xl rounded-full font-black max-md:font-medium max-lg:font-semibold max-xl:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl"
+              className="bg-blue-700 px-5 py-3 max-md:px-3 max-md:py-2 max-lg:px-4 max-lg:py-2 max-md:text-base max-lg:text-xl text-2xl rounded-full font-black max-md:font-medium max-lg:font-semibold max-xl:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl  cursor-hand-light dark:cursor-hand-dark"
             >
               BLOGS
             </button>

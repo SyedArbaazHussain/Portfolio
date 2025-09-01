@@ -187,7 +187,7 @@ const Blogs = () => {
             onClick={handlePrevious}
             className="z-10 absolute top-1/2 left-0 transform -translate-y-1/2 p-3 px-7 mx-20 
           bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
-          hover:bg-gray-700 dark:bg-gray-600 cursor-pointer"
+          hover:bg-gray-700 dark:bg-gray-600  cursor-hand-light dark:cursor-hand-dark"
           >
             {/* &#8592;  */}◀
           </a>
@@ -195,7 +195,7 @@ const Blogs = () => {
             onClick={handleNext}
             className="z-10 absolute top-1/2 right-0 transform -translate-y-1/2 p-3 px-7 mx-20 
             bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
-            hover:bg-gray-400 dark:bg-gray-600 cursor-pointer"
+            hover:bg-gray-400 dark:bg-gray-600  cursor-hand-light dark:cursor-hand-dark"
           >
             {/* &#8594;  */}▶
           </a>
