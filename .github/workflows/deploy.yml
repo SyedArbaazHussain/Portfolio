@@ -5,6 +5,10 @@ on:
     branches:
       - main
 
+# (Optional) Set default permissions for the workflow
+permissions:
+  contents: read
+
 jobs:
   build:
     name: Build
@@ -15,23 +19,29 @@ jobs:
       - name: Checkout repo
         uses: actions/checkout@v5
 
-      # Setup Bun using the official action
-      - name: Setup Bun
-        uses: oven-sh/setup-bun@v2
+      # Setup Node.js with npm caching
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: 'npm'
 
-      # Install dependencies with Bun
+      # Install dependencies (prefer a clean CI install if package-lock.json exists)
       - name: Install dependencies
         run: |
-          bun install || npm install
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
-      # Update browserslist DB (optional but safe)
-      - name: Update browserslist DB
-        run: npx update-browserslist-db@latest
-        continue-on-error: true
+      # (Optional but recommended by GitHub Pages docs)
+      - name: Configure Pages
+        uses: actions/configure-pages@v5
 
-      # Build the project using Bun
+      # Build the project with npm
       - name: Build project
-        run: bun run build
+        run: npm run build
 
       # Upload production-ready build files
       - name: Upload production-ready build files
