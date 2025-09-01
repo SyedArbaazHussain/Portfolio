@@ -26,8 +26,7 @@ jobs:
 
       # Updates
       - name: Install dependencies
-        run: |
-          bunx update-browserslist-db@latest || npx update-browserslist-db@latest
+        run: npx update-browserslist-db@latest
 
       # Build the project using Bun
       - name: Build project
