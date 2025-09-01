@@ -1,3 +1,14 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer utilities {
+    .cursor-light {
+      cursor: url('/src/assets/cursor-light.svg'), auto;
+    }
+  
+    .cursor-dark {
+      cursor: url('/src/assets/cursor-dark.svg'), auto;
+    }
+  }
+  
