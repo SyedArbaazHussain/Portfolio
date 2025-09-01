@@ -19,6 +19,10 @@ const About = () => {
       category: "Languages & Frameworks",
       items: [
         {
+          name: "IBM iSystems",
+          icon: "/src/assets/ibm_icon_130909.svg",
+        },
+        {
           name: "Python",
           icon: "https://img.icons8.com/color/40/000000/python.png",
         },
