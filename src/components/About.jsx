@@ -1,4 +1,5 @@
 import React from "react";
+import IBM from "../assets/ibm_icon";
 
 const About = () => {
   const tools = [
@@ -20,7 +21,7 @@ const About = () => {
       items: [
         {
           name: "IBM iSystems",
-          icon: "src/assets/ibm_icon_130909.svg",
+          icon: IBM
         },
         {
           name: "Python",
