@@ -27,10 +27,11 @@ const About = () => {
       category: "Languages & Frameworks",
       items: [
         {
-          name: "IBM iSystems / AS400",
+          name: "IBM iSystems",
           icon: IBM
         },
         {
+          name: "AS400",
           icon: AS400
         },
         {
