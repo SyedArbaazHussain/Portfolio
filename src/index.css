@@ -1,5 +1,7 @@
 @import "tailwindcss";
 
+@custom-variant dark (&:where(.dark, .dark *));
+
 @layer utilities {
     .cursor-light {
       cursor: url('/cursor-light.svg') 16 16, auto;
