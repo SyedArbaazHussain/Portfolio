@@ -10,8 +10,7 @@ import "./App.css";
 function App() {
   return (
     <>
-      <div className="transition duration-1000 transform bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white cursor-[url('/public/cursor-light.svg')_16_16,_pointer] dark:cursor-[url('/public/cursor-dark.svg')_16_16,_pointer]">
-
+      <div className="transition duration-1000 transform bg-blue-300 bg-opacity-80 dark:bg-gray-900 text-black dark:text-white cursor-[url('/cursor-light.svg') 16 16, pointer] dark:cursor-[url('/cursor-dark.svg') 16 16, pointer]">
         <NavBar />
         {/* <ContactSticky /> */}
 
