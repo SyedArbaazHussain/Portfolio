@@ -28,7 +28,9 @@ const About = () => {
       items: [
         {
           name: "IBM iSystems / AS400",
-          icon: IBM,
+          icon: IBM
+        },
+        {
           icon: AS400
         },
         {
