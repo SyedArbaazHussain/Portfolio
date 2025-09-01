@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
                 <img
                   src={projectList[prevIndex].image}
                   className="hidden xl:block object-cover w-full rounded-3xl"
-                  alt={projects[prevIndex].name}
+                  alt={projectList[prevIndex].name}
                 />
                 <div className="p-7">
                   <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4">
