@@ -26,9 +26,14 @@ jobs:
           node-version: 23
           cache: 'npm'
 
-      # Install dependencies
+      # Install dependencies (works with or without a lockfile)
       - name: Install dependencies
-        run: npm ci
+        run: |
+          if [ -f package-lock.json ]; then
+            npm ci
+          else
+            npm install
+          fi
 
       # (Optional but recommended by GitHub Pages docs)
       - name: Configure Pages
