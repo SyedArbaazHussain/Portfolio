@@ -14,7 +14,7 @@
 
     @media (prefers-color-scheme: dark) {
       .os400 {
-        fill: #003366;
+        fill: #3b82f6;
       }
     }
   </style>
