@@ -80,11 +80,11 @@ const Projects: React.FC = () => {
   };
   
     return (
-      <div className="flex w-full justify-center flex-col text-center overflow-hidden px-5 md:px-20">
+      <div className="flex w-full justify-center flex-col text-center overflow-hidden max-sm:px-5 max-md:px-20">
         {/* Mobile Grid View */}
-        <div className="md:hidden flex flex-col items-center justify-center w-full px-6">
-          <h1 className="text-4xl sm:text-3xl font-bold text-gray-800 dark:text-gray-200 mb-6">
-            Projects
+        <div className="hidden max-md:flex flex-col items-center justify-center h-full w-full px-6">
+        <h1 className="text-4xl max-sm:text-3xl max-md:text-4xl max-md:font-black font-bold text-center text-gray-800 dark:text-gray-200">
+          Projects
           </h1>
           <div className="grid grid-cols-1 gap-6">
             {projectList.map((project, index) => (
@@ -96,12 +96,13 @@ const Projects: React.FC = () => {
                   className="absolute inset-0 bg-cover bg-center dark:opacity-30 opacity-20 rounded-lg"
                   style={{ backgroundImage: `url(${project.image})` }}
                 />
-                <div className="relative z-10">
-                  <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4">
-                    {project.name}
+                {/* Content */}
+              <div className="relative z-10">
+                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
+                  {project.name}
                   </h2>
-                  <p className="text-gray-600 dark:text-gray-400 mb-4">
-                    {project.description}
+                  <p className="text-gray-600 dark:text-gray-400 mb-4 text-center">
+                  {project.description}
                   </p>
                   <a
                     href={project.link}
@@ -125,10 +126,10 @@ const Projects: React.FC = () => {
   
         {/* Desktop Carousel View */}
         <div className="hidden md:flex flex-col items-center justify-center w-full px-10">
-          <h1 className="text-6xl lg:text-5xl font-bold text-gray-800 dark:text-gray-200 pt-32">
+          <h1 className="text-6xl lg:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
             Projects
           </h1>
-          <div className="grid grid-cols-12 gap-5 justify-center items-center">
+          <div className="grid grid-cols-12 gap-5 max-xl:-mx-60 justify-center items-center">
             {/* Previous Project */}
             <div
               className="relative w-full pt-10 pb-20 col-span-3 transition-opacity duration-500"
@@ -139,14 +140,14 @@ const Projects: React.FC = () => {
                 WebkitMaskImage: "linear-gradient(to right, transparent, black)",
               }}
             >
-              <div className="flex flex-col items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
+               <div className="flex flex-col justify-center items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
                 <img
                   src={projectList[prevIndex].image}
-                  className="hidden xl:block object-cover w-full rounded-3xl"
+                  className="max-xl:hidden object-cover w-full rounded-3xl"
                   alt={projectList[prevIndex].name}
                 />
-                <div className="p-7">
-                  <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4">
+                <div className="p-7 flex flex-col items-center">
+                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
                     {projectList[prevIndex].name}
                   </h2>
                   <p>{projectList[prevIndex].description}</p>
@@ -159,14 +160,15 @@ const Projects: React.FC = () => {
               className="relative w-full pt-10 pb-20 col-span-6 transition-opacity duration-500"
               style={{ opacity: 1, transform: "scale(1)" }}
             >
-              <div className="flex flex-col items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
+               <div className="flex flex-col justify-center items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
                 <img
                   src={projectList[currentIndex].image}
                   className="object-cover w-full rounded-3xl"
                   alt={projectList[currentIndex].name}
                 />
-                <div className="pt-8 pb-1 flex flex-col items-center">
-                  <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4">
+                <div className="pt-8 pb-1 flex flex-col justify-center items-center">
+                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
+
                     {projectList[currentIndex].name}
                   </h2>
                   <p>{projectList[currentIndex].description}</p>
@@ -201,11 +203,11 @@ const Projects: React.FC = () => {
               <div className="flex flex-col items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
                 <img
                   src={projectList[nextIndex].image}
-                  className="hidden xl:block object-cover w-full rounded-3xl"
+                  className="max-xl:hidden object-cover w-full rounded-3xl"
                   alt={projectList[nextIndex].name}
                 />
-                <div className="p-7">
-                  <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4">
+                 <div className="p-7 flex flex-col items-center">
+                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
                     {projectList[nextIndex].name}
                   </h2>
                   <p>{projectList[nextIndex].description}</p>
@@ -215,16 +217,20 @@ const Projects: React.FC = () => {
           </div>
   
           {/* Navigation Buttons */}
-          <div className="relative w-full">
+          <div className="absolute  w-full">
             <button
               onClick={handlePrevious}
-              className="absolute top-1/2 left-0 transform -translate-y-1/2 p-3 px-7 mx-20 bg-gray-800 text-white rounded-full shadow-lg transition duration-200 hover:bg-gray-700 dark:bg-gray-600 cursor-hand-light dark:cursor-hand-dark"
+              className="z-10 absolute top-1/2 left-0 transform -translate-y-1/2 p-3 px-7 mx-20 
+          bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
+          hover:bg-gray-700 dark:bg-gray-600 cursor-pointer"
             >
               ◀
             </button>
             <button
               onClick={handleNext}
-              className="absolute top-1/2 right-0 transform -translate-y-1/2 p-3 px-7 mx-20 bg-gray-800 text-white rounded-full shadow-lg transition duration-200 hover:bg-gray-400 dark:bg-gray-600 cursor-hand-light dark:cursor-hand-dark"
+              className="z-10 absolute top-1/2 right-0 transform -translate-y-1/2 p-3 px-7 mx-20 
+              bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
+              hover:bg-gray-400 dark:bg-gray-600 cursor-pointer"
             >
               ▶
             </button>
