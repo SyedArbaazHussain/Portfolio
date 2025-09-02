@@ -179,22 +179,31 @@ const Blogs: React.FC = () => {
 
         {/* Navigation Buttons */}
         <div className="absolute w-full">
-          <a
-            onClick={handlePrevious}
-            className="z-10 absolute top-1/2 left-0 transform -translate-y-1/2 p-3 px-7 mx-20 
-          bg-gray-800 text-white rounded-full shadow-md transition duration-200 
-          hover:bg-gray-700 dark:bg-gray-600 cursor-pointer"
-          >
+          <button
+  type="button"
+  onClick={handlePrevious}
+  aria-label="Previous"
+  className="z-10 absolute top-1/2 left-0 transform -translate-y-1/2 mx-20 p-3 px-7
+  bg-gray-800 text-white rounded-full shadow-md transition-colors duration-200
+  hover:bg-gray-700 dark:bg-gray-600 cursor-hand
+             focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
+             focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900"
+>
             {/* &#8592;  */}◀
-          </a>
-          <a
-            onClick={handleNext}
-            className="z-10 absolute top-1/2 right-0 transform -translate-y-1/2 p-3 px-7 mx-20 
-            bg-gray-800 text-white rounded-full shadow-md transition duration-200 
-            hover:bg-gray-400 dark:bg-gray-600 cursor-pointer"
-          >
-            {/* &#8594;  */}▶
-          </a>
+          </button>
+          <button
+  onClick={handleNext}
+  type="button"
+  aria-label="Next"
+  className="z-10 absolute top-1/2 right-0 transform -translate-y-1/2 mx-20 p-3 px-7
+             bg-gray-800 text-white rounded-full shadow-md transition-colors duration-200
+             hover:bg-gray-700 dark:bg-gray-600 cursor-hand
+             focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
+             focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900"
+>
+  {/* ▶ */}
+  ▶
+</button>
         </div>
       </div>
     </div>

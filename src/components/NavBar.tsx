@@ -29,7 +29,6 @@ const NavBar: React.FC = () => {
   }, []);
 
   return (
-    <>
       <nav className="z-50 sticky top-20 ml-7 md:ml-10 lg:ml-20 xl:ml-32 w-fit rounded-full transition-all duration-500 ease-in-out h-0">
         <div className="flex-row-reverse flex justify-center items-center px-0 mx-auto">
           {/* Mobile Menu Button */}
@@ -59,13 +58,10 @@ const NavBar: React.FC = () => {
               className=" block px-3 py-2 text-base font-semibold rounded-full w-fit text-white dark:text-black dark:hover:bg-blue-400 hover:bg-blue-700 transition duration-300 text-left bg-blue-900 dark:bg-blue-200"
             >
               {isDarkMode ? (
-                <span className="flex gap-2">
-                  <img src={LightMode} className="w-6" />
-                  LIGHT
-                </span>
+                  <p><img src={LightMode} className="w-6" alt="Light Mode" /> LIGHT</p>
               ) : (
                 <span className="flex gap-2">
-                  <img src={DarkMode} className="w-6" />
+                  <p><img src={DarkMode} className="w-6" alt="Dark Mode" /></p>
                   DARK
                 </span>
               )}
@@ -114,7 +110,6 @@ const NavBar: React.FC = () => {
           </div>
         )}
       </nav>
-    </>
   );
 };
 

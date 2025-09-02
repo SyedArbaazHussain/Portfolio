@@ -5,11 +5,13 @@ import DB2400 from "../assets/DB2400.svg";
 import OS400 from "../assets/OS400.svg";
 
 interface ToolItem {
+  id: number;
   name: string;
   icon: string;
 }
 
 interface ToolCategory {
+  id: number;
   category: string;
   items: ToolItem[];
 }
@@ -17,114 +19,149 @@ interface ToolCategory {
 const About: React.FC = () => {
   const tools: ToolCategory[] = [
     {
+      id: 1,
       category: "Operating Systems",
       items: [
         {
+          id: 1,
           name: "Linux",
           icon: "https://img.icons8.com/color/40/000000/linux.png",
         },
         {
+          id: 2,
           name: "Windows",
           icon: "https://img.icons8.com/?size=40&id=YJfJ0JM5Imsj&format=png&color=000000",
         },
         {
+          id: 3,
           name: "OS400",
           icon: OS400,
         },
       ],
     },
     {
+      id: 2,
       category: "Languages & Frameworks",
       items: [
-        { name: "IBM iSystems", icon: IBM },
-        { name: "AS400", icon: AS400 },
         {
+          id: 1,
+          name: "IBM iSystems",
+          icon: IBM
+        },
+        {
+          id: 2,
+          name: "AS400",
+          icon: AS400
+        },
+        {
+          id: 3,
           name: "Python",
           icon: "https://img.icons8.com/color/40/000000/python.png",
         },
         {
+          id: 4,
           name: "JavaScript",
           icon: "https://img.icons8.com/color/40/000000/javascript.png",
         },
         {
+          id: 5,
           name: "Java",
           icon: "https://img.icons8.com/?size=100&id=13679&format=png&color=000000",
         },
         {
+          id: 6,
           name: "C",
           icon: "https://img.icons8.com/color/40/000000/c.png",
         },
         {
+          id: 7,
           name: "HTML5",
           icon: "https://img.icons8.com/color/40/000000/html-5.png",
         },
         {
+          id: 8,
           name: "CSS3",
           icon: "https://img.icons8.com/color/40/000000/css3.png",
         },
         {
+          id: 9,
           name: "React",
           icon: "https://img.icons8.com/plasticine/40/000000/react.png",
         },
         {
+          id: 10,
           name: "Node.js",
           icon: "https://img.icons8.com/color/50/000000/nodejs.png",
         },
         {
+          id: 11,
           name: "Express.js",
           icon: "https://img.icons8.com/?size=40&id=2ZOaTclOqD4q&format=png&color=000000",
         },
       ],
     },
     {
+      id: 3,
       category: "Databases & Tools",
       items: [
         {
+          id:1,
           name: "MySQL",
           icon: "https://img.icons8.com/?size=50&id=UFXRpPFebwa2&format=png&color=000000",
         },
         {
+          id:2,
           name: "MongoDB",
           icon: "https://img.icons8.com/color/40/000000/mongodb.png",
         },
         {
+          id:3,
           name: "DB2/400",
           icon: DB2400,
         },
       ],
     },
     {
+      id: 4,
       category: "DevOps & Others",
       items: [
         {
+          id:1,
           name: "Git",
           icon: "https://img.icons8.com/color/40/000000/git.png",
         },
         {
+          id:2,
           name: "GitHub",
           icon: "https://img.icons8.com/fluent/40/000000/github.png",
         },
         {
+          id:3,
           name: "Docker",
           icon: "https://img.icons8.com/color/40/000000/docker.png",
         },
         {
+          id:4,
           name: "YOLO",
           icon: "https://avatars.githubusercontent.com/u/26833451?s=40&v=4",
         },
         {
+          id:5,
           name: "OpenCV",
           icon: "https://img.icons8.com/?size=40&id=bpip0gGiBLT1&format=png&color=000000",
         },
         {
+          id:6,
           name: "Conda",
           icon: "https://img.icons8.com/?size=40&id=F4uMFPZgS0gt&format=png&color=000000",
         },
         {
+          id:7,
           name: "Jupyter",
           icon: "https://img.icons8.com/?size=40&id=J0SgMWzAxqFj&format=png&color=000000",
         },
         {
+          id:8,
           name: "UiPath",
           icon: "https://img.icons8.com/?size=100&id=HhCUhcFcSjU8&format=png&color=000000",
         },
@@ -143,16 +180,11 @@ const About: React.FC = () => {
         troubleshooting, and problem-solving. With expertise in{" "}
         <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 lg:text-3xl text-xl md:text-2xl lg:px-2 px-1">
           Web Development
-        </span>
-        ,
-        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 lg:text-3xl text-xl md:text-2xl lg:px-2 px-1">
+        </span> , <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 lg:text-3xl text-xl md:text-2xl lg:px-2 px-1">
           Software Development
-        </span>
-        ,
-        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 lg:text-3xl text-xl md:text-2xl lg:px-2 px-1">
+        </span> , <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 lg:text-3xl text-xl md:text-2xl lg:px-2 px-1">
           Databases
-        </span>
-        , I enjoy exploring new technologies and creating innovative projects.
+        </span>, I enjoy exploring new technologies and creating innovative projects.
         My passion lies in using programming to solve challenges and transform
         ideas into practical, impactful solutions.
       </h2>
@@ -166,19 +198,19 @@ const About: React.FC = () => {
 
       {/* Skill Section */}
       <div className="px-6 lg:px-12 pt-5 md:pt-10 pb-5 md:pb-7">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-black mb-6 text-center text-gray-800 dark:text-gray-200">
           🔧 Technologies, Tools & Frameworks Mastered
         </h2>
         <div className="space-y-12">
-          {tools.map((toolCategory, index) => (
-            <div key={index} className="text-center">
+          {tools.map((toolCategory) => (
+            <div key={toolCategory.id} className="text-center">
               <h3 className="text-sm sm:text-lg md:text-xl lg:text-2xl xl:text-3xl font-bold mb-4 text-gray-700 dark:text-gray-300">
                 {toolCategory.category}
               </h3>
               <div className="flex justify-center flex-wrap gap-6">
-                {toolCategory.items.map((item, i) => (
+                {toolCategory.items.map((item) => (
                   <div
-                    key={i}
+                    key={item.id}
                     className="flex flex-col items-center space-y-2 text-center text-xl lg:text-base"
                   >
                     <img

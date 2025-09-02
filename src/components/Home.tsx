@@ -1,6 +1,6 @@
 import React from "react";
-import headImg from "/me-head.jpg";
-import Contact from "./Contact";
+import headImg from "../assets/me-head.jpg";
+import {Contact} from "./Contact";
 
 const Home: React.FC = () => {
   return (
@@ -27,25 +27,25 @@ const Home: React.FC = () => {
           <div className="flex sm:flex-wrap justify-center items-center sm:gap-4 lg:gap-5 gap-3 flex-row pt-5">
             <button
               onClick={() => (window.location.href = "#about")}
-              className="bg-blue-700 px-3 py-2 md:px-4 lg:px-5 lg:py-3 text-base md:text-xl lg:text-2xl rounded-full font-black font-medium md:font-semibold lg:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl"
+              className="bg-blue-700 px-3 py-2 md:px-4 lg:px-5 lg:py-3 text-base md:text-md lg:text-xl rounded-full font-black dark:text-white text-white sm:text-base xl:text-2xl  cursor-hand"
             >
               ABOUT
             </button>
             <button
               onClick={() => (window.location.href = "#projects")}
-               className="bg-blue-700 px-3 py-2 md:px-4 lg:px-5 lg:py-3 text-base md:text-xl lg:text-2xl rounded-full font-black font-medium md:font-semibold lg:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl"
+               className="bg-blue-700 px-3 py-2 md:px-4 lg:px-5 lg:py-3 text-base md:text-xl lg:text-3xl rounded-full font-black dark:text-white text-white sm:text-base xl:text-3xl  cursor-hand"
             >
               PROJECTS
             </button>
-            {/* <button
+            <button
               onClick={() => (window.location.href = "#contact")}
-               className="bg-blue-700 px-3 py-2 md:px-4 lg:px-5 lg:py-3 text-base md:text-xl lg:text-2xl rounded-full font-black font-medium md:font-semibold lg:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl"
+               className="bg-blue-700 px-3 py-2 md:px-4 lg:px-5 lg:py-3 text-base md:text-xl lg:text-3xl rounded-full font-black dark:text-white text-white sm:text-base xl:text-3xl cursor-hand"
             >
               CONTACT
-            </button> */}
+            </button>
             <button
               onClick={() => (window.location.href = "#blogs")}
-               className="bg-blue-700 px-3 py-2 md:px-4 lg:px-5 lg:py-3 text-base md:text-xl lg:text-2xl rounded-full font-black font-medium md:font-semibold lg:font-bold dark:text-white text-white sm:text-base lg:text-xl xl:text-2xl"
+               className="bg-blue-700 px-3 py-2 md:px-4 lg:px-5 lg:py-3 text-base md:text-xl lg:text-3xl rounded-full font-black dark:text-white text-white sm:text-base xl:text-3xl cursor-hand"
             >
               BLOGS
             </button>

@@ -1,12 +1,8 @@
 <svg xmlns="http://www.w3.org/2000/svg"
-     viewBox="0 0 600 600"
-     width="600" height="600"
-     preserveAspectRatio="xMidYMid meet"
-     role="img" aria-labelledby="title desc">
-  <title id="title">Hand Cursor – solid silhouette (no seams)</title>
-  <desc id="desc">Single-path filled silhouette; the inner boundary is removed to eliminate gaps.</desc>
-
-  <path fill="#000000" d="
+     viewBox="0 0 650 650"
+     width="18" height="18">
+  <rect width="18" height="18" fill="transparent"/>
+  <path fill="#55ff00ff" stroke="#000000ff" stroke-width="60" d="
     M180.00,27.00 L199.00,27.00 L215.00,32.00 L233.00,46.00 L243.00,63.00 L246.00,75.00 L247.00,229.00
     L263.00,223.00 L287.00,224.00 L306.00,233.00 L320.00,248.00 L326.00,242.00 L342.00,233.00 L365.00,230.00
     L387.00,237.00 L400.00,247.00 L406.00,255.00 L419.00,245.00 L430.00,240.00 L452.00,238.00 L468.00,242.00

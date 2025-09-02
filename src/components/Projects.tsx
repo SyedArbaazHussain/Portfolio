@@ -4,6 +4,7 @@ import pcc from "../assets/pcc.png";
 import portfolio from "../assets/portfolio.png";
 
 interface Project {
+  id: number;
   name: string;
   link: string;
   image: string;
@@ -16,6 +17,7 @@ interface Project {
 
 const projectList: Project[] = [
   {
+    id: 1,
     name: "FallSafe-yolov8",
     link: "https://github.com/FallSafe/FallSafe-yolov8",
     image: fallsafe,
@@ -31,6 +33,7 @@ const projectList: Project[] = [
       "https://img.shields.io/github/directory-file-count/FallSafe/FallSafe-yolov8?type=file&label=Files",
   },
   {
+    id:2,
     name: "PumpCare-Connect",
     link: "https://github.com/SyedArbaazHussain/PumpCare-Connect",
     image: pcc,
@@ -46,6 +49,7 @@ const projectList: Project[] = [
       "https://img.shields.io/github/directory-file-count/SyedArbaazHussain/PumpCare-Connect?type=file&label=Files",
   },
   {
+    id:3,
     name: "Portfolio",
     link: "https://github.com/SyedArbaazHussain/Portfolio",
     image: portfolio,
@@ -87,9 +91,9 @@ const Projects: React.FC = () => {
           Projects
           </h1>
           <div className="grid grid-cols-1 gap-6">
-            {projectList.map((project, index) => (
+            {projectList.map((project) => (
               <div
-                key={index}
+                key={project.id}
                 className="relative shadow-lg rounded-md p-6 flex flex-col items-center"
               >
                 <div

@@ -1,13 +1,38 @@
 @import "tailwindcss";
 
+/* Tailwind v4 dark-mode via class on an ancestor */
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer utilities {
-    .cursor-light {
-      cursor: url('/cursor-light.svg') 16 16, auto;
-    }
-    .cursor-dark {
-      cursor: url('/cursor-dark.svg') 16 16, auto;
-    }
+  .cursor-pointer { cursor: url('/cursorLight.png') 12 12, url('/cursorLight.svg') 12 12, default; }
+
+  .cursor-hand {
+    cursor: url('/handLight.png') 12 12, url('/handLight.svg') 12 12, pointer;
+  }
+ 
+  .cursor-hand:hover {
+    cursor: url('/handLight.png') 12 12, url('/handLight.svg') 12 12, pointer;
   }
   
+  .cursor-hand:active {
+    cursor: url('/handLight-press.png') 12 12, url('/handLight-press.svg') 12 12, pointer;
+  }
+
+  /* Dark theme overrides, scoped to a .dark ancestor */
+  :where(.dark, .dark *) .cursor-pointer { cursor: url('/cursorDark.png') 12 12, url('/cursorDark.svg') 12 12, default; }
+
+  :where(.dark, .dark *) .cursor-hand {
+    cursor: url('/handDark.png') 12 12, url('/handDark.svg') 12 12, pointer;
+  }
+  :where(.dark, .dark *) .cursor-hand:hover {
+    cursor: url('/handDark.png') 12 12, url('/handDark.svg') 12 12, pointer;
+  }
+  :where(.dark, .dark *) .cursor-hand:active {
+    cursor: url('/handDark-press.png') 12 12, url('/handDark-press.svg') 12 12, pointer;
+  }
+
+  .cursor-hand:disabled,
+  :where(.dark, .dark *) .cursor-hand:disabled {
+    cursor: not-allowed;
+  }
+}
