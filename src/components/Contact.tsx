@@ -55,9 +55,9 @@ const socials: SocialLink[] = [
 const Contact = () => {
   return (
     <div>
-            <div className="hidden mt-7 xl:flex xl:flex-row xl:flex-wrap justify-center items-center text-center gap-3">
+            <div className="hidden mt-7 max-sm:flex max-sm:flex-row max-sm:flex-wrap justify-center items-center text-center gap-3">
 
-      {/* <div className="hidden mt-7 md:flex md:flex-row md:flex-wrap justify-center items-center text-center gap-3"> */}
+      {/* <div className="hidden mt-7 max-lg:flex max-lg:flex-row max-lg:flex-wrap justify-center items-center text-center gap-3"> */}
         {socials.map((social) => (
           <a
             href={social.link}
@@ -65,7 +65,7 @@ const Contact = () => {
             title={social.alt}
             key={social.name}
           >
-            <img src={social.icon} alt={social.alt} className="h-10" />
+            <img src={social.icon} alt={social.alt} className="max-h-10" />
           </a>
         ))}
       </div>
@@ -85,7 +85,7 @@ const Contact = () => {
 //             title={social.alt}
 //             key={social.name}
 //           >
-//             <img src={social.icon} alt={social.alt} className="h-12" />
+//             <img src={social.icon} alt={social.alt} className="max-h-12" />
 //           </a>
 //         ))}
 //       </div>

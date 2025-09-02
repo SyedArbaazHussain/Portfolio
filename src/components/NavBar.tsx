@@ -30,12 +30,12 @@ const NavBar: React.FC = () => {
 
   return (
     <>
-      <nav className="z-50 sticky top-20 ml-32 xl:ml-7 lg:ml-10 md:ml-20 w-fit rounded-full transition-all duration-500 ease-in-out h-0">
-        <div className="xl:flex-row-reverse flex justify-center items-center px-0 mx-auto">
+      <nav className="z-50 sticky top-20 ml-32 max-sm:ml-7 max-md:ml-10 max-lg:ml-20 w-fit rounded-full transition-all duration-500 ease-in-out h-0">
+        <div className="max-sm:flex-row-reverse flex justify-center items-center px-0 mx-auto">
           {/* Mobile Menu Button */}
-          <div className="flex gap-4 xl:m-0">
+          <div className="flex gap-4 max-sm:m-0">
             <button
-              className="xl:m-0 p-3 rounded-full text-black hover:bg-blue-500 bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white transition-transform duration-300 transform hover:scale-110"
+              className="max-sm:m-0 p-3 rounded-full text-black hover:bg-blue-500 bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white transition-transform duration-300 transform hover:scale-110"
               onClick={toggleMenu}
               aria-expanded={isMenuOpen}
               aria-label="Toggle menu"
@@ -77,7 +77,7 @@ const NavBar: React.FC = () => {
         {isMenuOpen && (
           <div
             ref={menuRef}
-            className="xl:ml-7 absolute inset-x-0 bg-white dark:bg-blue-900 bg-opacity-50 dark:bg-opacity-50 backdrop-filter backdrop-blur-md shadow-lg rounded-3xl transition-transform duration-500 ease-in-out mt-2"
+            className="max-sm:ml-7 absolute inset-x-0 bg-white dark:bg-blue-900 bg-opacity-50 dark:bg-opacity-50 backdrop-filter backdrop-blur-lg shadow-md rounded-3xl transition-transform duration-500 ease-in-out mt-2"
           >
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
