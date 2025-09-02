@@ -19,11 +19,11 @@ const Footer: React.FC = () => {
   return (
     <footer className="py-8 mt-12">
       <div className="container mx-auto text-center">
-        <p className="text-sm mb-4">
+        <p className="text-xl mb-4">
           &copy; {new Date().getFullYear()} Syed Arbaaz Hussain. All rights
           reserved.
         </p>
-        <div className="flex flex-col md:flex-row justify-center gap-1 md:gap-5">
+        <div className="flex flex-col lg:flex-row justify-center gap-1 lg:gap-5">
           <a
             href="https://github.com/SyedArbaazHussain/"
             target="_blank"

@@ -52,27 +52,27 @@ const Blogs: React.FC = () => {
   };
 
   return (
-    <div className="flex mt-10 w-full justify-center flex-col text-center overflow-hidden sm:px-5 md:px-20">
+    <div className="flex mt-10 w-full justify-center flex-col text-center overflow-hidden xl:px-5 lg:px-20">
       {/* GRID */}
-      <div className="hidden md:flex flex-col items-center justify-center h-full w-full p-6">
-        <h1 className="text-4xl sm:text-3xl md:text-4xl md:font-black font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
+      <div className="hidden lg:flex flex-col items-center justify-center h-full w-full p-6">
+        <h1 className="text-4xl xl:text-3xl lg:text-4xl lg:font-black font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
           Blogs
         </h1>
         <div className="grid grid-cols-1 gap-6">
           {blogs.map((project, index) => (
             <div
               key={index}
-              className="relative shadow-md rounded-lg p-6 flex flex-col items-center"
+              className="relative shadow-lg rounded-md p-6 flex flex-col items-center"
             >
               <div
-                className="absolute inset-0 bg-cover bg-center opacity-10 rounded-lg"
+                className="absolute inset-0 bg-cover bg-center opacity-10 rounded-md"
                 style={{
                   backgroundImage: `url(${project.image})`,
                 }}
               ></div>
               {/* Content */}
               <div className="relative z-10">
-                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
+                <h2 className="text-sm font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
                   {project.name}
                 </h2>
                 <p className="text-gray-600 dark:text-gray-400 mb-4 text-center">
@@ -93,11 +93,11 @@ const Blogs: React.FC = () => {
       </div>
 
       {/* Carousel */}
-      <div className="hidden md:flex flex-col items-center justify-center w-full px-10">
-        <h1 className="text-6xl lg:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
+      <div className="hidden lg:flex flex-col items-center justify-center w-full px-10">
+        <h1 className="text-6xl md:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
           Blogs
         </h1>
-        <div className="grid grid-cols-12 gap-5 xl:-mx-60 justify-center items-center">
+        <div className="grid grid-cols-12 gap-5 sm:-mx-60 justify-center items-center">
           {/* Previous Project */}
           <div
             className="relative w-full pt-10 pb-20 transition-opacity duration-500 col-span-3"
@@ -111,11 +111,11 @@ const Blogs: React.FC = () => {
             <div className="flex flex-col justify-center items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
               <img
                 src={blogs[prevIndex].image}
-                className="xl:hidden object-cover w-full rounded-3xl"
+                className="sm:hidden object-cover w-full rounded-3xl"
                 alt={blogs[prevIndex].name}
               />
               <div className="p-7 flex flex-col items-center">
-                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
+                <h2 className="text-sm font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
                   {blogs[prevIndex].name}
                 </h2>
                 {blogs[prevIndex].description}
@@ -135,7 +135,7 @@ const Blogs: React.FC = () => {
                 alt={blogs[currentIndex].name}
               />
               <div className="pt-8 pb-1 flex flex-col justify-center items-center">
-                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
+                <h2 className="text-sm font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
                   {blogs[currentIndex].name}
                 </h2>
                 <div>{blogs[currentIndex].description}</div>
@@ -164,11 +164,11 @@ const Blogs: React.FC = () => {
             <div className="flex flex-col justify-center items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
               <img
                 src={blogs[nextIndex].image}
-                className="xl:hidden object-cover w-full rounded-3xl"
+                className="sm:hidden object-cover w-full rounded-3xl"
                 alt={blogs[nextIndex].name}
               />
               <div className="p-7 flex flex-col items-center">
-                <h2 className="text-xl font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
+                <h2 className="text-sm font-bold text-gray-800 dark:text-gray-300 mb-4 text-center">
                   {blogs[nextIndex].name}
                 </h2>
                 {blogs[nextIndex].description}
@@ -182,7 +182,7 @@ const Blogs: React.FC = () => {
           <a
             onClick={handlePrevious}
             className="z-10 absolute top-1/2 left-0 transform -translate-y-1/2 p-3 px-7 mx-20 
-          bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
+          bg-gray-800 text-white rounded-full shadow-md transition duration-200 
           hover:bg-gray-700 dark:bg-gray-600 cursor-pointer"
           >
             {/* &#8592;  */}◀
@@ -190,7 +190,7 @@ const Blogs: React.FC = () => {
           <a
             onClick={handleNext}
             className="z-10 absolute top-1/2 right-0 transform -translate-y-1/2 p-3 px-7 mx-20 
-            bg-gray-800 text-white rounded-full shadow-lg transition duration-200 
+            bg-gray-800 text-white rounded-full shadow-md transition duration-200 
             hover:bg-gray-400 dark:bg-gray-600 cursor-pointer"
           >
             {/* &#8594;  */}▶

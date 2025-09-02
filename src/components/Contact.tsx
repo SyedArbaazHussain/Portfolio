@@ -55,9 +55,9 @@ const socials: SocialLink[] = [
 const Contact = () => {
   return (
     <div>
-            <div className="hidden mt-7 sm:flex sm:flex-row sm:flex-wrap justify-center items-center text-center gap-3">
+            <div className="hidden mt-7 xl:flex xl:flex-row xl:flex-wrap justify-center items-center text-center gap-3">
 
-      {/* <div className="hidden mt-7 lg:flex lg:flex-row lg:flex-wrap justify-center items-center text-center gap-3"> */}
+      {/* <div className="hidden mt-7 md:flex md:flex-row md:flex-wrap justify-center items-center text-center gap-3"> */}
         {socials.map((social) => (
           <a
             href={social.link}
@@ -76,8 +76,8 @@ const Contact = () => {
 
 // const ContactSticky = () => {
 //   return (
-//     <div className="z-50 sticky lg:top-10 lg:rounded-full lg:transition-all lg:duration-500 lg:ease-in-out h-0">
-//       <div className="hidden lg:flex pt-52 lg:px-10 gap-2 lg:gap-5 flex-col justify-items-end items-end">
+//     <div className="z-50 sticky md:top-10 md:rounded-full md:transition-all md:duration-500 md:ease-in-out h-0">
+//       <div className="hidden md:flex pt-52 md:px-10 gap-2 md:gap-5 flex-col justify-items-end items-end">
 //         {socials.map((social) => (
 //           <a
 //             href={social.link}
