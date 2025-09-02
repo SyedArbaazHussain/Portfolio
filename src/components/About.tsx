@@ -133,23 +133,23 @@ const About: React.FC = () => {
   ];
 
   return (
-    <div className="flex min-h-screen pt-40 max-md:px-10 max-lg:px-16 max-xl:px-32 xl:px-60 w-full justify-center flex-col text-center overflow-hidden">
+    <div className="flex min-h-screen pt-40 md:px-10 lg:px-16 xl:px-32 xl:px-60 w-full justify-center flex-col text-center overflow-hidden">
       {/* Heading */}
-      <h1 className="text-6xl max-lg:text-5xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
+      <h1 className="text-6xl lg:text-5xl font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
         About
       </h1>
-      <h2 className="font-semibold text-orange-600 opacity-90 dark:text-orange-400 mb-6 text-3xl max-sm:text-lg max-md:text-xl max-lg:text-2xl">
+      <h2 className="font-semibold text-orange-600 opacity-90 dark:text-orange-400 mb-6 text-3xl sm:text-lg md:text-xl lg:text-2xl">
         Hello! I am an engineer skilled in technical thinking, debugging,
         troubleshooting, and problem-solving. With expertise in{" "}
-        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
+        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl md:text-xl lg:text-2xl lg:px-2 px-1">
           Web Development
         </span>
         ,
-        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
+        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl md:text-xl lg:text-2xl lg:px-2 px-1">
           Software Development
         </span>
         ,
-        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl max-md:text-xl max-lg:text-2xl lg:px-2 px-1">
+        <span className="font-bold text-indigo-800 dark:text-blue-500 mb-6 text-3xl md:text-xl lg:text-2xl lg:px-2 px-1">
           Databases
         </span>
         , I enjoy exploring new technologies and creating innovative projects.
@@ -158,15 +158,15 @@ const About: React.FC = () => {
       </h2>
 
       {/* Description */}
-      <p className="leading-relaxed text-base md:text-lg lg:text-xl max-w-3xl mx-auto">
+      <p className="leading-relaxed text-base md:text-lg lg:text-xl w-3xl mx-auto">
         Welcome to my portfolio! I&lsquo;m a passionate developer who loves
         exploring new technologies and building innovative projects. I enjoy
         solving problems and bringing ideas to life through code.
       </p>
 
       {/* Skill Section */}
-      <div className="px-6 lg:px-12 max-md:pt-5 pt-10 max-md:pb-5 pb-7">
-        <h2 className="text-4xl max-sm:text-2xl max-md:text-3xl max-lg:text-4xl max-md:font-black font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
+      <div className="px-6 lg:px-12 md:pt-5 pt-10 md:pb-5 pb-7">
+        <h2 className="text-4xl sm:text-2xl md:text-3xl lg:text-4xl md:font-black font-bold mb-6 text-center text-gray-800 dark:text-gray-200">
           🔧 Technologies, Tools & Frameworks Mastered
         </h2>
         <div className="space-y-12">
@@ -198,7 +198,7 @@ const About: React.FC = () => {
       </div>
 
       {/* Achievements Section */}
-      <div className="mt-8 text-left mx-auto max-w-3xl">
+      <div className="mt-8 text-left mx-auto w-3xl">
         <h3 className="font-bold mb-4 text-xl md:text-2xl">🏆 Achievements</h3>
         <ul className="list-disc pl-6 space-y-4">
           <li className="text-base md:text-lg">

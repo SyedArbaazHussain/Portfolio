@@ -80,10 +80,10 @@ const Projects: React.FC = () => {
   };
   
     return (
-      <div className="flex w-full justify-center flex-col text-center overflow-hidden max-sm:px-5 max-md:px-20">
+      <div className="flex w-full justify-center flex-col text-center overflow-hidden sm:px-5 md:px-20">
         {/* Mobile Grid View */}
-        <div className="hidden max-md:flex flex-col items-center justify-center h-full w-full px-6">
-        <h1 className="text-4xl max-sm:text-3xl max-md:text-4xl max-md:font-black font-bold text-center text-gray-800 dark:text-gray-200">
+        <div className="hidden md:flex flex-col items-center justify-center h-full w-full px-6">
+        <h1 className="text-4xl sm:text-3xl md:text-4xl md:font-black font-bold text-center text-gray-800 dark:text-gray-200">
           Projects
           </h1>
           <div className="grid grid-cols-1 gap-6">
@@ -129,7 +129,7 @@ const Projects: React.FC = () => {
           <h1 className="text-6xl lg:text-5xl font-bold text-center text-gray-800 dark:text-gray-200 pt-32">
             Projects
           </h1>
-          <div className="grid grid-cols-12 gap-5 max-xl:-mx-60 justify-center items-center">
+          <div className="grid grid-cols-12 gap-5 xl:-mx-60 justify-center items-center">
             {/* Previous Project */}
             <div
               className="relative w-full pt-10 pb-20 col-span-3 transition-opacity duration-500"
@@ -143,7 +143,7 @@ const Projects: React.FC = () => {
                <div className="flex flex-col justify-center items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
                 <img
                   src={projectList[prevIndex].image}
-                  className="max-xl:hidden object-cover w-full rounded-3xl"
+                  className="xl:hidden object-cover w-full rounded-3xl"
                   alt={projectList[prevIndex].name}
                 />
                 <div className="p-7 flex flex-col items-center">
@@ -203,7 +203,7 @@ const Projects: React.FC = () => {
               <div className="flex flex-col items-center p-6 bg-blue-400 dark:bg-blue-900 dark:bg-opacity-70 rounded-3xl">
                 <img
                   src={projectList[nextIndex].image}
-                  className="max-xl:hidden object-cover w-full rounded-3xl"
+                  className="xl:hidden object-cover w-full rounded-3xl"
                   alt={projectList[nextIndex].name}
                 />
                  <div className="p-7 flex flex-col items-center">
