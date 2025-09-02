@@ -52,17 +52,18 @@ const socials: SocialLink[] = [
   },
 ];
 
-const Contact: React.FC = () => {
+const Contact = () => {
   return (
     <div>
-      <div className="mt-7 flex flex-wrap justify-center items-center text-center gap-3 sm:hidden">
+            <div className="hidden mt-7 max-sm:flex max-sm:flex-row max-sm:flex-wrap justify-center items-center text-center gap-3">
+
+      {/* <div className="hidden mt-7 max-lg:flex max-lg:flex-row max-lg:flex-wrap justify-center items-center text-center gap-3"> */}
         {socials.map((social) => (
           <a
             href={social.link}
+            alt={social.alt}
             title={social.alt}
             key={social.name}
-            target="_blank"
-            rel="noopener noreferrer"
           >
             <img src={social.icon} alt={social.alt} className="max-h-10" />
           </a>
@@ -72,17 +73,17 @@ const Contact: React.FC = () => {
   );
 };
 
-// export const ContactSticky: React.FC = () => {
+
+// const ContactSticky = () => {
 //   return (
-//     <div className="z-50 sticky top-10 rounded-full transition-all duration-500 ease-in-out h-0">
-//       <div className="hidden lg:flex pt-52 px-10 gap-5 flex-col items-end">
+//     <div className="z-50 sticky lg:top-10 lg:rounded-full lg:transition-all lg:duration-500 lg:ease-in-out h-0">
+//       <div className="hidden lg:flex pt-52 lg:px-10 gap-2 lg:gap-5 flex-col justify-items-end items-end">
 //         {socials.map((social) => (
 //           <a
 //             href={social.link}
+//             alt={social.alt}
 //             title={social.alt}
 //             key={social.name}
-//             target="_blank"
-//             rel="noopener noreferrer"
 //           >
 //             <img src={social.icon} alt={social.alt} className="max-h-12" />
 //           </a>
@@ -91,5 +92,7 @@ const Contact: React.FC = () => {
 //     </div>
 //   );
 // };
+
+// export default { Contact, ContactSticky };
 
 export default Contact;

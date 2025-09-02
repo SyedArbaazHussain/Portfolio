@@ -31,11 +31,11 @@ const NavBar: React.FC = () => {
   return (
     <>
       <nav className="z-50 sticky top-20 ml-32 max-sm:ml-7 max-md:ml-10 max-lg:ml-20 w-fit rounded-full transition-all duration-500 ease-in-out h-0">
-        <div className="flex max-sm:flex-row-reverse justify-center items-center px-0 mx-auto">
+        <div className="max-sm:flex-row-reverse flex justify-center items-center px-0 mx-auto">
           {/* Mobile Menu Button */}
-          <div className="flex gap-4">
+          <div className="flex gap-4 max-sm:m-0">
             <button
-              className="p-3 rounded-full text-black hover:bg-blue-500 bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white transition-transform duration-300 transform hover:scale-110 cursor-hand-light dark:cursor-hand-dark"
+              className="max-sm:m-0 p-3 rounded-full text-black hover:bg-blue-500 bg-blue-700 focus:outline-none focus:ring-2 focus:ring-white transition-transform duration-300 transform hover:scale-110"
               onClick={toggleMenu}
               aria-expanded={isMenuOpen}
               aria-label="Toggle menu"
@@ -54,19 +54,18 @@ const NavBar: React.FC = () => {
                 />
               </svg>
             </button>
-
             <button
               onClick={toggleDarkMode}
-              className="px-3 py-2 text-base font-semibold rounded-full text-white dark:text-black dark:hover:bg-blue-400 hover:bg-blue-700 transition duration-300 bg-blue-900 dark:bg-blue-200 cursor-hand-light dark:cursor-hand-dark"
+              className=" block px-3 py-2 text-base font-semibold rounded-full w-fit text-white dark:text-black dark:hover:bg-blue-400 hover:bg-blue-700 transition duration-300 text-left bg-blue-900 dark:bg-blue-200"
             >
               {isDarkMode ? (
                 <span className="flex gap-2">
-                  <img src={LightMode} className="w-6" alt="Light Mode" />
+                  <img src={LightMode} className="w-6" />
                   LIGHT
                 </span>
               ) : (
                 <span className="flex gap-2">
-                  <img src={DarkMode} className="w-6" alt="Dark Mode" />
+                  <img src={DarkMode} className="w-6" />
                   DARK
                 </span>
               )}
@@ -83,25 +82,31 @@ const NavBar: React.FC = () => {
             <div className="px-2 pt-2 pb-3 space-y-1">
               <button
                 onClick={() => (window.location.href = "#")}
-                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700 hover:bg-blue-500 rounded-3xl transition duration-300 cursor-hand-light dark:cursor-hand-dark"
+                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 HOME
               </button>
               <button
                 onClick={() => (window.location.href = "#about")}
-                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700 hover:bg-blue-500 rounded-3xl transition duration-300 cursor-hand-light dark:cursor-hand-dark"
+                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 ABOUT
               </button>
               <button
                 onClick={() => (window.location.href = "#projects")}
-                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700 hover:bg-blue-500 rounded-3xl transition duration-300 cursor-hand-light dark:cursor-hand-dark"
+                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 PROJECTS
               </button>
+              {/* <button
+                onClick={() => (window.location.href = "#contact")}
+                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
+              >
+                CONTACT
+              </button> */}
               <button
                 onClick={() => (window.location.href = "#blogs")}
-                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700 hover:bg-blue-500 rounded-3xl transition duration-300 cursor-hand-light dark:cursor-hand-dark"
+                className="block w-full text-left px-3 py-2 text-base font-semibold text-black dark:text-white dark:hover:bg-blue-700  hover:bg-blue-500 rounded-3xl transition duration-300"
               >
                 BLOGS
               </button>
