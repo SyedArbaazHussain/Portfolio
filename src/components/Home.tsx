@@ -4,7 +4,7 @@ import {Contact} from "./Contact";
 
 const Home: React.FC = () => {
   return (
-    <div className="flex flex-col lg:grid lg:grid-cols-11  justify-center items-center w-full h-full lg:mt-44 md:mt-40 mt-32 md:px-20 px-8">
+    <div className="flex flex-col lg:grid lg:grid-cols-11  justify-center items-center w-full h-full mt-10 md:mt-15 lg:mt-20 px-8 md:px-20">
       <img
         src={headImg}
         alt="Syed Arbaaz Hussain"
