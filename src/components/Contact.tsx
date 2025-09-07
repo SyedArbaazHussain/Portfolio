@@ -47,16 +47,14 @@ const socials: SocialLink[] = [
 export const Contact: React.FC = () => {
   return (
     <div>
-            {/* <div className="mt-2 flex flex-row flex-wrap justify-center items-center text-center gap-3"> */}
-
-      <div className="mt-7 lg:flex lg:flex-row lg:flex-wrap justify-center items-center text-center gap-3">
+      <div className="mt-2 flex flex-row flex-wrap justify-center items-center text-center gap-3">
         {socials.map((social) => (
           <a
             href={social.link}
             title={social.name}
             key={social.name}
           >
-            <img src={social.icon} alt={social.name} className="max-h-10" />
+            <img src={social.icon} alt={social.name} className="max-h-6" />
           </a>
         ))}
       </div>

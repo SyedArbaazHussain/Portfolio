@@ -4,14 +4,14 @@
 @custom-variant dark (&:where(.dark, .dark *));
 
 @layer utilities {
-  .cursor-pointer { cursor: url('/cursorLight.png') 12 12, url('/cursorLight.svg') 12 12, default; }
+  .cursor-pointer { cursor: url('/cursorLight.svg') 12 12, default; }
 
   .cursor-hand {
-    cursor: url('/handLight.png') 12 12, url('/handLight.svg') 12 12, pointer;
+    cursor: url('/handLight.svg') 12 12, pointer;
   }
  
   .cursor-hand:hover {
-    cursor: url('/handLight.png') 12 12, url('/handLight.svg') 12 12, pointer;
+    cursor: url('/handLight.svg') 12 12, pointer;
   }
   
   .cursor-hand:active {
@@ -19,20 +19,38 @@
   }
 
   /* Dark theme overrides, scoped to a .dark ancestor */
-  :where(.dark, .dark *) .cursor-pointer { cursor: url('/cursorDark.png') 12 12, url('/cursorDark.svg') 12 12, default; }
+  :where(.dark, .dark *) .cursor-pointer { cursor: url('/cursorDark.svg') 12 12, default; }
 
   :where(.dark, .dark *) .cursor-hand {
-    cursor: url('/handDark.png') 12 12, url('/handDark.svg') 12 12, pointer;
+    cursor: url('/handDark.svg') 12 12, pointer;
   }
   :where(.dark, .dark *) .cursor-hand:hover {
-    cursor: url('/handDark.png') 12 12, url('/handDark.svg') 12 12, pointer;
+    cursor: url('/handDark.svg') 12 12, pointer;
   }
   :where(.dark, .dark *) .cursor-hand:active {
-    cursor: url('/handDark-press.png') 12 12, url('/handDark-press.svg') 12 12, pointer;
+    cursor: url('/handDark-press.svg') 12 12, pointer;
   }
 
   .cursor-hand:disabled,
   :where(.dark, .dark *) .cursor-hand:disabled {
     cursor: not-allowed;
   }
+  
+  
+  @keyframes marquee-left {
+    from { transform: translateX(0); }
+    to   { transform: translateX(-50%); }
+  }
+  
+  /* Reusable animation utility (speed via CSS var or default 30s) */
+  .animate-marquee {
+    animation: marquee-left var(--marquee-duration, 30s) linear infinite;
+    will-change: transform;
+  }
+  
+  /* Optional: pause on hover */
+  .pause-on-hover:hover .animate-marquee {
+    animation-play-state: paused;
+  }
+
 }

@@ -187,7 +187,7 @@ const Blogs: React.FC = () => {
   bg-gray-800 text-white rounded-full shadow-md transition-colors duration-200
   hover:bg-gray-700 dark:bg-gray-600 cursor-hand
              focus:outline-none focus-visible:ring-2 focus-visible:ring-blue-500
-             focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900"
+             focus-visible:ring-offset-2 focus-visible:ring-offset-white dark:focus-visible:ring-offset-gray-900 "
 >
             {/* &#8592;  */}◀
           </button>
