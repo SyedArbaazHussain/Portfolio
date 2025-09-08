@@ -21,7 +21,7 @@ jobs:
       # Setup Node.js WITH npm cache (only if a lockfile exists)
       - name: Setup Node.js (cached)
         if: ${{ hashFiles('**/package-lock.json', '**/npm-shrinkwrap.json') != '' }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 'lts/*'
           cache: npm
@@ -33,7 +33,7 @@ jobs:
       # Setup Node.js WITHOUT cache (no lockfile case)
       - name: Setup Node.js (no cache)
         if: ${{ hashFiles('**/package-lock.json', '**/npm-shrinkwrap.json') == '' }}
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: 'lts/*'
 
