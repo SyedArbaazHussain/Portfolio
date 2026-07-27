@@ -48,7 +48,7 @@ jobs:
 
       # (Optional but recommended by GitHub Pages docs)
       - name: Configure Pages
-        uses: actions/configure-pages@v5
+        uses: actions/configure-pages@v6
 
       # Build the project with npm
       - name: Build project
